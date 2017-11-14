@@ -1,0 +1,4 @@
+ :disabled="(dataTypeCode.code!='11' && subOptionChecked.length==0) || selectedOption.fieldexplain=='空'"
+
+1. 区间单向；区间范围
+2. 更多条件：选择后隐藏；

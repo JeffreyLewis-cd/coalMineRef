@@ -1,0 +1,214 @@
+        //添加-更多条件-所需要的变量和函数
+        let conditionAllType1=[];     //全局变量，存放添加的条件
+        let conditionAllType2=[];     //全局变量，存放添加的条件
+        let conditionAllType4=[];     //全局变量，存放添加的条件
+        let conditionAllType5=[];     //全局变量，存放添加的条件
+        let conditionsCheck=[];  //全局变量，判断某个条件是否已经添加过了
+
+//搜集-更多条件-里面的参数
+        let aConditions=[];
+
+        let collectParameters1=function(){
+            let addedOption1=document.getElementsByClassName('inputTxt-container-col');
+
+            for(let key1=0; key1<addedOption1.length;key1++){
+                var fieldName=String(addedOption1[key1].lastChild.dataset.close);
+                var fieldType=Number(addedOption1[key1].lastChild.dataset.type);
+                var fieldValue1=String(addedOption1[key1].firstChild.lastChild.previousSibling.previousSibling.value);
+                var conditionsItem;
+                conditionsItem= {
+                    "FieldName": fieldName,
+                    "FieldType": fieldType,
+                    "StringField": {
+                        "Value": fieldValue1
+                    }
+                };
+                aConditions.push(conditionsItem);
+            }
+        };
+
+        let collectParameters23=function(){
+            let addedOption23=document.getElementsByClassName('judgeSelect-container-col');
+
+            for(let key23=0; key23<addedOption23.length; key23++){
+                var fieldName=String(addedOption23[key23].lastChild.dataset.close);
+                var fieldType=Number(addedOption23[key23].lastChild.dataset.type);
+                var fieldOperator=String(addedOption23[key23].firstChild.nextElementSibling.firstChild.lastChild.lastChild.value);
+                var fieldValue23=Number(addedOption23[key23].firstChild.nextElementSibling.lastElementChild.lastElementChild.value);
+                var conditionsItem;
+                switch (fieldType){
+                    case 2:
+                        conditionsItem={
+                            "FieldName": fieldName,
+                            "FieldType": fieldType,
+                            "FloatField":{
+                                "Operator":fieldOperator,
+                                "Value":fieldValue23
+                            }
+                        };
+                        break;
+                    case 3:
+                        conditionsItem={
+                            "FieldName": fieldName,
+                            "FieldType": fieldType,
+                            "IntegerField":{
+                                "Operator":fieldOperator,
+                                "Value":fieldValue23
+                            }
+                        };
+                        break;
+
+                }
+                aConditions.push(conditionsItem);
+            }
+
+        };
+
+        let collectParameters4=function(){
+            var conditionsItem={};
+            let addedOption4=document.getElementsByClassName('checkbox-container-col');
+            for(let key4f=0; key4f<addedOption4.length;key4f++){
+                let addedOption4Checked=addedOption4[key4f].getElementsByClassName('ivu-checkbox-wrapper-checked');
+                let fieldName=String(addedOption4[key4f].lastChild.dataset.close);
+                let fieldType=Number(addedOption4[key4f].lastChild.dataset.type);
+                let addedOp4CheckedValue=[];
+                for(let key4=0; key4<addedOption4Checked.length;key4++){
+                    addedOp4CheckedValue.push(String( addedOption4Checked[key4].dataset.code ))
+                }
+                conditionsItem={
+                    "FieldName": fieldName,
+                    "FieldType": fieldType,
+                    "DicField":{
+                        "Values":addedOp4CheckedValue
+                    }
+                };
+                aConditions.push(conditionsItem);
+            }
+        };
+
+        let collectParamentersAdded=function(){
+            aConditions=[]; //初始化数组容器
+
+            collectParameters1();
+            collectParameters23();
+            collectParameters4();
+        };
+
+
+//搜集-公共条件-里面的参数
+        let oPubConditions={};
+        let productionStartTime='';
+        let productionEndTime='';
+        let province='';
+        let city='';
+        let county='';
+        let coalmineName='';
+        let coalseamName='';
+        let workfaceName='';
+        let accidentName='';
+        let accidentPlace='';
+        let accidentStartTime='';
+        let accidentEndTime='';
+        let collectParametersPub=function(){
+            //公共容器
+            let pubConditions=document.getElementsByClassName('inforSearch-public-conditions')[0];
+
+            //生产时间-日期区间
+            let dateRangeBox=pubConditions.getElementsByClassName("inforSearch-select-dateRange")[0];
+            if(dateRangeBox!=undefined){
+                let dateEle=dateRangeBox.querySelectorAll("input[class='ivu-input']")[0];
+                    let userDate=dateEle.value;
+                    if(userDate=='' || userDate==undefined){
+                        productionStartTime='';
+                        productionEndTime='';
+                    }else {
+                        productionStartTime=String(userDate).split(' - ')[0];
+                        productionEndTime=String(userDate).split(' - ')[1];
+                    }
+                oPubConditions.ProductionStartTime=productionStartTime;
+                oPubConditions.ProductionEndTime=productionEndTime;
+            }
+
+            //选择省市区
+            let userLocation=pubConditions.getElementsByClassName("pub-condi-address-box")[0].querySelectorAll("select");
+            if(userLocation.length!=0){
+                province=userLocation[0].value;
+                if(province=='省'){province=''}
+                city=userLocation[1].value;
+                if(city=='市'){ city=''}
+                county=userLocation[2].value;
+                if(county=='区'){ county='' }
+                oPubConditions.Province=province;
+                oPubConditions.City=city;
+                oPubConditions.County=county;
+            }
+
+            //获取煤矿名称
+            let coalMineNameBox=pubConditions.getElementsByClassName("coalmineName")[0];
+            if(coalMineNameBox!=undefined){
+                coalmineName=coalMineNameBox.getElementsByClassName("ivu-input")[0].value;
+                oPubConditions.CoalmineName=coalmineName;
+            }
+
+            //获取煤层名称
+            let coalseamNameBox=pubConditions.getElementsByClassName("coalseamName")[0];
+            if(coalseamNameBox!=undefined){
+                coalseamName=coalseamNameBox.getElementsByClassName("ivu-input")[0].value;
+                oPubConditions.CoalseamName=coalseamName;
+            }
+
+            //获取工作面名称
+            let workfaceNameBox=pubConditions.getElementsByClassName("workfaceName")[0];
+            if(workfaceNameBox!=undefined){
+                workfaceName=workfaceNameBox.getElementsByClassName("ivu-input")[0].value;
+                oPubConditions.WorkfaceName=workfaceName;
+            }
+
+            //事故时间-日期区间
+            let accidentDateRangeBox=pubConditions.getElementsByClassName("accident-dateRange")[0];
+            if(accidentDateRangeBox!=undefined){
+                let dateEle=accidentDateRangeBox.querySelectorAll("input[class='ivu-input']")[0];
+                let userDate=dateEle.value;
+                if(userDate=='' || userDate==undefined){
+                    accidentStartTime='';
+                    accidentEndTime='';
+                }else {
+                    accidentStartTime=String(userDate).split(' - ')[0];
+                    accidentEndTime=String(userDate).split(' - ')[1];
+                }
+                oPubConditions.AccidentStartTime=accidentStartTime;
+                oPubConditions.AccidentEndTime=accidentEndTime;
+            }
+
+            //获取事故名称
+            let accidentNameBox=pubConditions.getElementsByClassName("accidentName")[0];
+            if(accidentNameBox!=undefined){
+                accidentName=accidentNameBox.getElementsByClassName("ivu-input")[0].value;
+                oPubConditions.AccidentName=accidentName;
+            }
+
+            //获取事故地点
+            let accidentPlaceBox=pubConditions.getElementsByClassName("accidentPlace")[0];
+            if(accidentPlaceBox!=undefined){
+                accidentPlace=accidentPlaceBox.getElementsByClassName("ivu-input")[0].value;
+                oPubConditions.AccidentPlace=accidentPlace;
+            }
+
+
+        };
+
+        //集合所有的参数；
+        let collectAll=function(){
+            collectParametersPub();
+            collectParamentersAdded();
+            oPubConditions.Conditions=aConditions;
+            oPubConditions.PageIndex=state.dataListPageNum;
+            oPubConditions.PageSize=state.dataListPageSize;
+            console.log(oPubConditions);
+            return oPubConditions
+        };
+
+        collectAll();
+
+        state.parametersAllx=oPubConditions;
+        state.condiContainerx=[conditionAllType1,conditionAllType2,conditionAllType4,conditionAllType5,conditionsCheck]

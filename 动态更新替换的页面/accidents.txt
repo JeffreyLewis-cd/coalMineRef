@@ -1,0 +1,140 @@
+
+//灾害信息-开始
+import gasExplosion from '../components/inforSearch/accidents/gas/gasExplosion/gasExplosion.vue'
+import gasPoisioning from '../components/inforSearch/accidents/gas/gasPoisioning/gasPoisioning.vue'
+import coalAndGasOutburst from '../components/inforSearch/accidents/gas/coalAndGasOutburst/coalAndGasOutburst.vue'
+import water from '../components/inforSearch/accidents/water/water.vue'
+import fireInfor from '../components/inforSearch/accidents/fire/fireInfor/fireInfor.vue'
+import firePosition from '../components/inforSearch/accidents/fire/firePosition/firePosition.vue'
+import fireArea from '../components/inforSearch/accidents/fire/fireArea/fireArea.vue'
+import rockBurst from '../components/inforSearch/accidents/hitRoof/rockBurst/rockBurst.vue'
+import roofCollapse from '../components/inforSearch/accidents/hitRoof/roofCollapse/roofCollapse.vue'
+import coalPowder from '../components/inforSearch/accidents/coalPowder/coalPowder.vue'
+import environment from '../components/inforSearch/accidents/environment/environment.vue'
+import others from '../components/inforSearch/accidents/others/others.vue'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//灾害信息-开始
+let accidentsRoutes = [
+
+  //灾害信息-开始
+  {
+    path: '/gasExplosion',
+    name: 'gasExplosion',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: gasExplosion,
+    }
+  },
+  {
+    path: '/gasPoisioning',
+    name: 'gasPoisioning',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: gasPoisioning,
+    }
+  },
+  {
+    path: '/coalAndGasOutburst',
+    name: 'coalAndGasOutburst',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: coalAndGasOutburst,
+    }
+  },
+  {
+    path: '/water',
+    name: 'water',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: water,
+    }
+  },
+  {
+    path: '/fireInfor',
+    name: 'fireInfor',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: fireInfor,
+    }
+  },
+  {
+    path: '/firePosition',
+    name: 'firePosition',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: firePosition,
+    }
+  },
+  {
+    path: '/fireArea',
+    name: 'fireArea',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: fireArea,
+    }
+  },
+  {
+    path: '/rockBurst',
+    name: 'rockBurst',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: rockBurst,
+    }
+  },
+  {
+    path: '/roofCollapse',
+    name: 'roofCollapse',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: roofCollapse,
+    }
+  },
+  {
+    path: '/coalPowder',
+    name: 'coalPowder',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: coalPowder,
+    }
+  },
+  {
+    path: '/environment',
+    name: 'environment',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: environment,
+    }
+  },
+  {
+    path: '/others',
+    name: 'others',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: others,
+    }
+  }
+  //灾害信息-结束
+];
+//灾害信息-结束
+
+
+
+
+

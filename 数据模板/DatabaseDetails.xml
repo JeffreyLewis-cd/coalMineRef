@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="CDISDEBUG">
+    <table code="category01-0310" name="TB_Magmaticrock" desc="岩浆岩">
+        <field name="F_Coalseam_Id" desc="煤层Id" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+    </table>
+    <table code="category01-0309" name="TB_Fracture" desc="断裂">
+        <field name="F_Coalseam_Id" desc="煤层Id" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+    </table>
+    <table code="category01-0308" name="TB_IgneousrockInvade" desc="火成岩侵入">
+        <field name="F_Coalseam_Id" desc="煤层Id" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+    </table>
+    <table code="category01-0307" name="TB_Sinkin" desc="陷落柱">
+        <field name="F_Coalseam_Id" desc="煤层Id" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+    </table>
+    <table code="category01-0306" name="TB_Jointing" desc="节理">
+        <field name="F_Coalseam_Id" desc="煤层Id" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+    </table>
+    <table code="category01-0305" name="TB_CreaseBend" desc="褶曲">
+        <field name="F_Name" desc="" type="1" index=""/>
+        <field name="F_Coalseam_Id" desc="煤层Id" type="1" index=""/>
+        <field name="F_Property" desc="褶曲性质" type="1" index="" dictionary="BF01-0305ZQ-ZQXZ"/>
+        <field name="F_Source" desc="来源" type="1" index="" dictionary="BF01-0305ZQ-ZQLY"/>
+        <field name="F_Incidence" desc="影响范围" type="1" index=""/>
+    </table>
+    <table code="category01-0102-01" name="TB_SafetyProductionLicense" desc="安全生产许可证">
+        <field name="F_SPL_ID" desc="安全生产许可证Id" type="1" index=""/>
+        <field name="F_Num" desc="安全生产许可证号" type="1" index=""/>
+        <field name="F_Production_Capacity" desc="批准生产能力" type="2" index="" unit=""/>
+        <field name="F_Coalseam_Id" desc="批准开采煤层" type="1" index=""/>
+        <field name="F_Certificate" desc="证书文件" type="1" index=""/>
+        <field name="F_Significant_Interval" desc="有效时间" type="1" index=""/>
+    </table>
+    <table code="category01-0102-02" name="TB_ProductionLicense" desc="生产许可证">
+        <field name="F_PL_ID" desc="生产许可证Id" type="1" index=""/>
+        <field name="F_Num" desc="证件号" type="1" index=""/>
+        <field name="F_Production_Capacity" desc="许可生产能力" type="2" index="" unit=""/>
+        <field name="F_Coalseam_Id" desc="开采煤层" type="1" index=""/>
+        <field name="F_Certificate" desc="证书文件" type="1" index=""/>
+        <field name="F_Significant_Interval" desc="有效期" type="1" index=""/>
+        <field name="F_Approve_Num" desc="初设批复文号" type="1" index=""/>
+        <field name="F_Check_Num" desc="主体工程验收文号" type="1" index=""/>
+    </table>
+    <table code="category01-0102-03" name="TB_ShopCard" desc="营业证">
+        <field name="F_SP_ID" desc="营业证Id" type="1" index=""/>
+        <field name="F_Num" desc="证件号" type="1" index=""/>
+        <field name="F_Certificate" desc="证书文件" type="1" index=""/>
+        <field name="F_Significant_Interval" desc="有效期" type="1" index=""/>
+    </table>
+    <table code="category01-0102-04" name="TB_BarmasterQualification" desc="矿长资格证">
+        <field name="F_BQ_ID" desc="矿长资格证ID" type="1" index=""/>
+        <field name="F_Name" desc="姓名" type="1" index=""/>
+        <field name="F_Certificate" desc="矿长资格证书" type="1" index=""/>
+        <field name="F_Safety_Certificate_Num" desc="安全资格证号" type="1" index=""/>
+        <field name="F_Significant_Interval" desc="有效期" type="1" index=""/>
+    </table>
+    <table code="category02-0103-01" name="TB_Accident_AfterPowerCharacteristic" desc="发生动力现象后的主要特征">
+        <field name="F_Granularity" desc="喷出煤的粒度" type="1" index="" unit=""/>
+        <field name="F_Other" desc="其他" type="1" index=""/>
+        <field name="F_Intersection_Angle" desc="孔洞形状轴线与水平面之夹角" type="2" index="" unit=""/>
+        <field name="F_Expulsion_Mine_Volume" desc="喷出煤量" type="2" index="" unit=""/>
+        <field name="F_Expulsion_Rock_Volume" desc="喷出岩石量" type="2" index="" unit=""/>
+        <field name="F_Expulsion_Distance" desc="煤喷出距离" type="2" index="" unit=""/>
+        <field name="F_Cumulate_Slope" desc="煤喷出堆积坡度" type="2" index="" unit=""/>
+        <field name="F_Sizing_Situation" desc="喷出煤的分选情况" type="1" index=""/>
+        <field name="F_Wall_Rock_Broken_Situation" desc="突出地点附近围岩破碎情况" type="1" index=""/>
+        <field name="F_Coalseam_Broken_Situation" desc="突出地点附近煤层破碎情况" type="1" index=""/>
+        <field name="F_Dynamic_Effect" desc="动力效应" type="1" index=""/>
+        <field name="F_PreMashgas_Pressure" desc="突出前瓦斯压力情况" type="1" index=""/>
+        <field name="F_After_Mashgas_Pressure" desc="突出后瓦斯涌出情况" type="1" index=""/>
+    </table>
+    <table code="category02-0501" name="TB_Accident_CoalDust" desc="煤尘">
+        <field name="F_Place_Type" desc="地点类型" type="4" index="" dictionary="BF02-0101WS-YBDD"/>
+        <field name="F_Volume_Thickness_CO" desc="CO体积浓度" type="2" index="" unit=""/>
+    </table>
+    <table code="category02-0001-01" name="TB_Accident_CoalseamCharacteristic" desc="煤层特征">
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Thickness" desc="厚度" type="2" index="" unit=""/>
+        <field name="F_Obliquity" desc="倾角" type="2" index="" unit=""/>
+        <field name="F_Hardness" desc="硬度" type="1" index="" unit=""/>
+        <field name="F_Top_Situation" desc="上部临近层开采情况" type="1" index=""/>
+        <field name="F_Buttom_Situation" desc="下部临近层开采情况" type="1" index=""/>
+    </table>
+    <table code="category02-0301" name="TB_Accident_Fire" desc="火灾信息">
+        <field name="F_Fire_Source" desc="引火热源" type="4" index="" dictionary="BF02-0301HZ-YHRY"/>
+        <field name="F_Fire_Place" desc="引火地点" type="4" index="" dictionary="BF02-0301HZ-YHDD"/>
+        <field name="F_Combustible_Type" desc="可燃物质分类" type="4" index="" dictionary="BF02-0301HZ-KYWZ"/>
+        <field name="F_Place_Type" desc="地点类型（发火位置）" type="4" index="" dictionary="BF02-0301HZ-FHWZ"/>
+        <field name="F_Combustible" desc="燃烧物" type="4" index="" dictionary="BF02-0301HZ-RSW"/>
+        <field name="F_Fire_Property" desc="发火性质" type="4" index="" dictionary="BF02-0301HZ-FHXZ"/>
+        <field name="F_Oxygen_Concentration_Classification" desc="氧气浓度分类" type="4" index="" dictionary="BF02-0301HZ-YQND"/>
+        <field name="F_Aeration_Relationship" desc="通风关系" type="4" index="" dictionary="BF02-0301HZ-TFGX"/>
+        <field name="F_Wind_Disorder_Appearance" desc="风流紊乱现象" type="4" index="" dictionary="BF02-0301HZ-FLWL"/>
+    </table>
+    <table code="category02-0301-02" name="TB_Accident_FireAccidentRangeInfo" desc="事故波及范围相关信息">
+        <field name="F_Place" desc="地点" type="1" index=""/>
+        <field name="F_Gas_CH4" desc="瓦斯CH4" type="2" index="" unit=""/>
+        <field name="F_Gas_O2" desc="氧气O2" type="2" index="" unit=""/>
+        <field name="F_Gas_NO2" desc="二氧化氮NO2" type="2" index="" unit=""/>
+        <field name="F_Gas_SO2" desc="二氧化硫SO2" type="2" index="" unit=""/>
+        <field name="F_Gas_H2S" desc="硫化氢H2S" type="2" index="" unit=""/>
+        <field name="F_Gas_NH5" desc="氨NH5" type="2" index="" unit=""/>
+        <field name="F_Info_Id" desc="" type="1" index=""/>
+    </table>
+    <table code="category02-0301-01" name="TB_Accident_FireAccidentSpotInfo" desc="事故地点相关信息">
+        <field name="F_Info_Id" desc="" type="1" index="" unit=""/>
+        <field name="F_Gas_CH4" desc="瓦斯CH4" type="2" index="" unit=""/>
+        <field name="F_Gas_O2" desc="氧气O2" type="2" index="" unit=""/>
+        <field name="F_Gas_CO" desc="一氧化碳CO" type="2" index="" unit=""/>
+        <field name="F_Gas_NO2" desc="二氧化氮NO2" type="2" index="" unit=""/>
+        <field name="F_Gas_SO2" desc="二氧化硫SO2" type="2" index="" unit=""/>
+        <field name="F_Gas_H2S" desc="硫化氢H2S" type="2" index="" unit=""/>
+        <field name="F_Gas_NH5" desc="氨NH5" type="2" index="" unit=""/>
+    </table>
+    <table code="category02-0402" name="TB_Accident_Impact_DYKZ" desc="冲击地压与矿震">
+        <field name="F_Laneway_Support_Type" desc="巷道支护方式" type="1" index=""/>
+        <field name="F_Landway_Close_Length" desc="巷道闭合长度" type="2" index="" unit="m"/>
+        <field name="F_Landway_Damage_Length" desc="巷道损坏长度" type="2" index="" unit="m"/>
+        <field name="F_Section_Area" desc="断面面积" type="2" index="" unit="m2"/>
+        <field name="F_Place_Type" desc="地点类型" type="4" index="" dictionary="BF02-0101WS-YBDD"/>
+        <field name="F_Section_Source_Map" desc="断面原始图（CAD" type="1" index=""/>
+        <field name="F_Section_Deformation_Map" desc="断面变形图（CAD）" type="1" index=""/>
+        <field name="F_Section_Deformation_Area" desc="断面变形面积" type="2" index="" unit="m2"/>
+    </table>
+    <table code="category02-0101" name="TB_Accident_MashgasBlast" desc="瓦斯爆炸">
+        <field name="F_Gather_Cause" desc="瓦斯积聚原因" type="4" index="" dictionary="BF02-0101WS-WSJJ"/>
+        <field name="F_Incendiary_Source" desc="点火源" type="4" index="" dictionary="BF02-0101WS-DHY"/>
+        <field name="F_Place_Type" desc="引爆地点（地点类型）" type="4" index="" dictionary="BF02-0101WS-YBDD"/>
+    </table>
+    <table code="category02-0103" name="TB_Accident_MashgasExtrude" desc="煤与瓦斯突出">
+        <field name="F_Date" desc="突出日期" type="5" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+        <field name="F_PJJL" desc="棚间距离" type="2" index="" unit="m"/>
+        <field name="F_KDJL" desc="控顶距离" type="2" index="" unit="m"/>
+        <field name="F_Omen" desc="突出预兆" type="1" index=""/>
+        <field name="F_Describe" desc="突出前及突出当时发生过程的描述" type="1" index=""/>
+        <field name="F_Experience" desc="经验教训" type="1" index=""/>
+        <field name="F_After_Power_Characteristic_Id" desc="发生动力现象后的主要特征" type="1" index=""/>
+        <field name="F_Datum_Mark" desc="标高" type="2" index="" unit="m"/>
+        <field name="F_Place_Type" desc="地点类型（巷道类型）" type="4" index="" dictionary="BF02-0103WS-DDLX"/>
+        <field name="F_Extrude_Type" desc="突出类型" type="4" index="" dictionary="BF02-0103WS-TCLX"/>
+        <field name="F_Vertical_Depth" desc="垂直深度" type="2" index="" unit="m"/>
+        <field name="F_Ventilate_Diagrammatic_Sketch" desc="突出地点通风示意图" type="1" index=""/>
+        <field name="F_Coalseam_Sectional_View" desc="突出处煤层剖面图" type="1" index=""/>
+        <field name="F_Coalseam_Roof_Histogram" desc="顶板岩层柱状图" type="1" index=""/>
+        <field name="F_Coalseam_Footwall_Histogram" desc="底板岩层柱状图" type="1" index=""/>
+        <field name="F_Geologic_Structure_Des" desc="地质构造的叙述" type="1" index=""/>
+        <field name="F_Suppor_Pattern" desc="支护方式" type="1" index=""/>
+        <field name="F_Valid_Air_Quantity" desc="有效风量" type="2" index="" unit=""/>
+        <field name="F_Normal_Mashgas_Thickness" desc="正常瓦斯浓度" type="2" index="" unit=""/>
+        <field name="F_Absolute_Mashgas_Thickness" desc="绝对瓦斯浓度" type="2" index="" unit=""/>
+        <field name="F_Function_Tool_Situation" desc="突出前作业及使用工具" type="1" index=""/>
+        <field name="F_Aperture_Heap_Pic" desc="突出孔洞及煤堆积情况（图）" type="1" index=""/>
+        <field name="F_Aperture_Heap_Word" desc="突出孔洞及煤堆积情况（文字描述）" type="1" index=""/>
+        <field name="F_Died_Num" desc="死亡人数" type="3" index="" unit="人"/>
+        <field name="F_Injury_Num" desc="受伤人数" type="3" index="" unit="人"/>
+        <field name="F_PreMeasure_Pic" desc="突出前采取的措施（图）" type="1" index=""/>
+        <field name="F_PreMeasure_Word" desc="突出前采取的措施（文字描述）" type="1" index=""/>
+    </table>
+    <table code="category02-0102" name="TB_Accident_MashgasPoisoning" desc="瓦斯中毒窒息">
+        <field name="F_Mashgas_Density" desc="事故地点瓦斯浓度" type="2" index=""/>
+        <field name="F_Transfinite_Place_Density" desc="瓦斯浓度超限地点及浓度" type="1" index=""/>
+        <field name="F_Place_Type" desc="地点类型" type="4" index="" dictionary="BF02-0101WS-YBDD"/>
+    </table>
+    <table code="category02-0401" name="TB_Accident_RoofCollapsed" desc="顶板垮塌">
+        <field name="F_Cause" desc="原因分类" type="4" index="" dictionary="BF02-0401DB-DBKT"/>
+        <field name="F_Coalmine_Amount" desc="煤量" type="2" index="" unit="吨"/>
+        <field name="F_Area" desc="面积（m2）" type="2" index="" unit="m2"/>
+        <field name="F_Sketch_Map" desc="垮塌地点示意图（CAD）" type="1" index=""/>
+        <field name="F_Place_Type" desc="地点类型" type="4" index="" dictionary="BF02-0101WS-YBDD"/>
+    </table>
+    <table code="category02-0201" name="TB_Accident_Waterhazard" desc="水害">
+        <field name="F_Water_Inrush_Source" desc="突水水源" type="4" index="" dictionary="BF02-0201SH-TCSY"/>
+        <field name="F_Water_Inrush_Passage" desc="突水通道" type="4" index="" dictionary="BF02-0201SH-TSTD"/>
+        <field name="F_Occur_Place" desc="发生部位" type="4" index="" dictionary="BF02-0201SH-FSBW"/>
+        <field name="F_Water_Irruption_Quantity" desc="突水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Place_Type" desc="地点类型" type="4" index="" dictionary="BF02-0101WS-YBDD"/>
+    </table>
+    <table code="category02-0001" name="TB_AccidentRegister" desc="所有事故">
+        <field name="F_Coalmine_Name" desc="" type="1" index=""/>
+        <field name="F_Accident_Name" desc="事故名称" type="1" index=""/>
+        <field name="F_Accident_Code" desc="事故类型编码" type="1" index=""/>
+        <field name="F_Accident_Grade" desc="事故等级" type="4" index="" dictionary="BF02-0000DJ-SGJB"/>
+        <field name="F_Accident_Time" desc="事故时间" type="5" index=""/>
+        <field name="F_Accident_Place" desc="事故地点" type="1" index=""/>
+        <field name="F_Vertical_Depth" desc="距地表垂直深度" type="2" index="" unit="m"/>
+        <field name="F_Ventilate_Diagrammatic_Sketch" desc="事故地点通风系统示意图（CAD、图片或PDF等）" type="1" index=""/>
+        <field name="F_Operation_Conditions" desc="作业情况" type="1" index=""/>
+        <field name="F_Died_Num" desc="死亡人数" type="3" index="" unit="人"/>
+        <field name="F_Involve_Range" desc="波及范围" type="1" index=""/>
+        <field name="F_Damnify_Degree" desc="损失程度" type="1" index=""/>
+        <field name="F_Accident_Characteristics" desc="事故特征" type="1" index=""/>
+        <field name="F_Accident_Cause" desc="事故原因" type="1" index=""/>
+        <field name="F_Accident_Handle" desc="事故处理" type="1" index=""/>
+        <field name="F_Rescue_Measures" desc="救援措施" type="1" index=""/>
+        <field name="F_Scene_Picture" desc="现场图片" type="1" index=""/>
+        <field name="F_Suppor_Pattern" desc="支护方式" type="1" index=""/>
+        <field name="F_Site_Elevation" desc="地点标高" type="2" index="" unit="m"/>
+        <field name="F_Valid_Air_Quantity" desc="有效风量" type="2" index="" unit=""/>
+        <field name="F_Normal_Mashgas_Thickness" desc="正常瓦斯浓度" type="2" index="" unit=""/>
+        <field name="F_Mashgas_Emission_Rate_A" desc="绝对瓦斯涌出量" type="2" index="" unit=""/>
+        <field name="F_Seriously_Injured_Num" desc="重伤人数" type="3" index="" unit="人"/>
+        <field name="F_Minor_Injured_Num" desc="轻伤人数" type="3" index="" unit="人"/>
+        <field name="F_Direct_Economic_Loss" desc="直接经济损失" type="2" index="" unit="万元"/>
+        <field name="F_Indirect_Economic_Loss" desc="间接经济损失" type="2" index="" unit="万元"/>
+        <field name="F_Prognostics" desc="事故预兆" type="1" index=""/>
+    </table>
+    <table code="category03-0101" name="TB_Aeration_AnemometryInfo" desc="通风-测风信息">
+        <field name="F_Time" desc="测风时间" type="5" index=""/>
+        <field name="F_Place" desc="测风地点" type="1" index=""/>
+        <field name="F_Fracture_Surface" desc="断面" type="2" index="" unit="m2"/>
+        <field name="F_Wind_Speed" desc="风速" type="2" index="" unit="m/min"/>
+        <field name="F_Air_Quantity" desc="风量" type="2" index="" unit="m3/min"/>
+        <field name="F_Mashgas_Thickness" desc="瓦斯浓度" type="2" index="" unit="%"/>
+        <field name="F_Thickness_CO2" desc="二氧化碳浓度" type="2" index="" unit="%"/>
+        <field name="F_Mashgas_Scalar_Quantity" desc="瓦斯纯量" type="2" index="" unit="m3/min"/>
+        <field name="F_Scalar_Quantity_CO2" desc="二氧化碳纯量" type="2" index="" unit="m3/min"/>
+        <field name="F_Dry_Temperature" desc="干温" type="2" index="" unit="℃"/>
+    </table>
+    <table code="category03-0103" name="TB_Aeration_PartAeration" desc="通风-局部通风">
+        <field name="F_PartFan_Name" desc="局扇名称" type="1" index=""/>
+        <field name="F_PartFan_No" desc="局扇型号" type="1" index=""/>
+        <field name="F_PartFan_Place" desc="局扇地点" type="1" index=""/>
+        <field name="F_PartFan_Purpose" desc="局扇用途" type="1" index=""/>
+        <field name="F_Mashgas_Thickness" desc="瓦斯浓度" type="2" index="" unit="%"/>
+        <field name="F_Capacity_Factor" desc="功率" type="2" index="" unit="KW"/>
+        <field name="F_Air_Pipeline_Length" desc="风筒长度" type="2" index="" unit="m"/>
+        <field name="F_Air_Pipeline_Diameter" desc="风筒直径" type="2" index="" unit="mm"/>
+        <field name="F_Fan_Air_Distribution_Quantity" desc="局扇配风风量" type="2" index="" unit="ｍ3/分"/>
+        <field name="F_Air_Pipeline_AirVelocity" desc="风筒出风量" type="2" index="" unit="ｍ3/分"/>
+        <field name="F_Mashgas_Scalar_Quantity" desc="瓦斯纯量" type="2" index="" unit="m3/min"/>
+        <field name="F_Tunnelling_Face_Air_Quantity" desc="掘进面回风量" type="2" index="" unit="ｍ3/分"/>
+        <field name="F_Part_Fan_Safety_Air_Quantity" desc="局扇安全配风量" type="2" index="" unit="ｍ3/分"/>
+    </table>
+    <table code="category03-0102" name="TB_Aeration_PrimaryFanAeration" desc="通风-主扇通风">
+        <field name="F_Electricity" desc="电流" type="2" index="" unit="A"/>
+        <field name="F_Voltage" desc="电压" type="2" index="" unit="V"/>
+        <field name="F_Fan_Angle" desc="风机叶片角度" type="2" index="" unit="℃"/>
+        <field name="F_Ground_Pressure" desc="地面大气压" type="2" index="" unit="Mpa"/>
+        <field name="F_Primary_Fan_Name" desc="主扇名称" type="1" index=""/>
+        <field name="F_Primary_Fan_Purpose" desc="主扇用途" type="1" index=""/>
+        <field name="F_Primary_Fan_No" desc="主扇型号" type="1" index=""/>
+        <field name="F_Negative_Pressure" desc="负压" type="2" index="" unit="Pa"/>
+        <field name="F_Capacity_Factor" desc="功率" type="2" index="" unit="KW"/>
+        <field name="F_Mine_Orifice" desc="等积孔" type="2" index="" unit="m2"/>
+        <field name="F_Coalmine_Total_Return_Air" desc="矿井总回风量" type="2" index="" unit="m3/min"/>
+        <field name="F_Coalmine_Total_Enter_Air" desc="矿井总进风量" type="2" index="" unit="m3/min"/>
+        <field name="F_Coalmine_Effective_Air" desc="矿井有效风量" type="2" index="" unit="m3/min"/>
+        <field name="F_Effective_Air_Rate" desc="有效风率" type="2" index="" unit="%"/>
+        <field name="F_Interior_Air_Leak_Rate" desc="内部漏风率" type="2" index="" unit="%"/>
+        <field name="F_External_Air_Leak_Rate" desc="外部漏风率" type="2" index="" unit="%"/>
+    </table>
+    <table code="category01-0201" name="TB_AerationInfo" desc="通风信息">
+        <field name="F_Aeration_Method" desc="通风方法" type="4" index="" dictionary="BF01-0201TF-TFFF"/>
+        <field name="F_Aeration_Mode" desc="通风方式" type="4" index="" dictionary="BF01-0201TF-TFFS"/>
+        <field name="F_PrimaryFan_Model_Num" desc="主扇型号" type="1" index=""/>
+        <field name="F_ReturnAir_Num" desc="回风风量" type="2" index="" unit="m3/min"/>
+        <field name="F_EnterAir_Num" desc="进风风量" type="2" index="" unit="m3/min"/>
+        <field name="F_Exhaust_Gas" desc="风排瓦斯" type="2" index="" unit="m3/min"/>
+    </table>
+    <table code="category06-0101" name="TB_CoalmineEquipment" desc="设备信息">
+        <field name="F_EId" desc="设备Id" type="1" index=""/>
+        <field name="F_Profession" desc="专业" type="1" index=""/>
+        <field name="F_Number" desc="编号" type="3" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Model" desc="型号" type="1" index=""/>
+        <field name="F_Vender" desc="厂家" type="1" index=""/>
+        <field name="F_TechnicParameter" desc="技术参数" type="1" index=""/>
+        <field name="F_Date" desc="投入使用日期" type="5" index=""/>
+    </table>
+    <table code="category01-0102" name="TB_CoalmineInfo" desc="煤矿信息">
+        <field name="F_EName" desc="所属企业" type="1" index=""/>
+        <field name="F_CName" desc="煤矿名称" type="1" index=""/>
+        <field name="F_Detailed_Addr" desc="详细地址" type="1" index=""/>
+        <field name="F_DesignedPC" desc="设计生产能力" type="2" index="" unit="万吨/年"/>
+        <field name="F_ApprovedPC" desc="核定生产能力" type="2" index="" unit="万吨/年"/>
+        <field name="F_Legal_Person" desc="法人" type="1" index=""/>
+        <field name="F_CellPhone" desc="手机" type="1" index=""/>
+        <field name="F_Landline" desc="固话" type="1" index=""/>
+        <field name="F_Enterprise_Property" desc="企业性质" type="4" index="" dictionary="BF01-0102MK-QYXZ"/>
+        <field name="F_Create_Coalmine_Time" desc="建井时间" type="5" index=""/>
+        <field name="F_Production_Time" desc="投产时间" type="5" index=""/>
+        <field name="F_Subordinate_Relation" desc="隶属关系" type="1" index=""/>
+        <field name="F_Coalmine_State" desc="矿井状态" type="4" index="" dictionary="BF01-0102MK-KJZT"/>
+        <field name="F_Coalmine_Location" desc="主井井口坐标" type="1" index=""/>
+        <field name="F_Coalmine_Range" desc="井田范围" type="1" index=""/>
+        <field name="F_Serve_Duration" desc="服务年限" type="2" index="" unit="年"/>
+        <field name="F_Geology_Reserves" desc="地质储量" type="2" index="" unit="万吨"/>
+        <field name="F_Can_Coalmine_Reserves" desc="可采储量" type="2" index="" unit="万吨"/>
+        <field name="F_Remainder_Coalmine_Reserves" desc="剩余可采储量" type="2" index="" unit="万吨"/>
+        <field name="F_Coalmine_AddrCondition" desc="矿井水文地址条件" type="1" index=""/>
+        <field name="F_Coalmine_StaffCount" desc="矿井职工数" type="3" index="" unit="人"/>
+        <field name="F_UnderCoalmine_StaffCount" desc="井下职工数" type="3" index="" unit="人"/>
+        <field name="F_Mashgas_Authenticate" desc="瓦斯等级鉴定" type="4" index="" dictionary="BF01-0102MK-WSJD"/>
+    </table>
+    <table code="category01-0402" name="TB_CoalminingWorkingFace" desc="采煤工作面">
+        <field name="F_Time" desc="年份" type="5" index=""/>
+        <field name="F_Mining_Area" desc="所属采区" type="1" index=""/>
+        <field name="F_Coalseam_Name" desc="开采煤层名称" type="1" index=""/>
+        <field name="F_Contrast_Relation" desc="井上井下对照关系" type="1" index=""/>
+        <field name="F_Coalseam_Storage" desc="煤层赋存" type="2" index="" unit=""/>
+        <field name="F_Roof_Floor_Lithology" desc="顶底板岩性" type="1" index=""/>
+        <field name="F_Geological_Structure" desc="地质构造" type="1" index=""/>
+        <field name="F_Hydrogeololgy" desc="水文地质" type="1" index=""/>
+        <field name="F_Ground_Temperature_Harm" desc="地温危害" type="1" index=""/>
+        <field name="F_Pound_Ground_Pressure" desc="冲击地压" type="1" index=""/>
+        <field name="F_Harmful_Gas" desc="有害气体" type="1" index=""/>
+        <field name="F_Geological_Reserves" desc="地质储量" type="2" index="" unit="万吨"/>
+        <field name="F_Workable_Reserves" desc="可采储量" type="2" index="" unit="万吨"/>
+        <field name="F_Productive_Power" desc="生产能力" type="2" index="" unit="万吨"/>
+        <field name="F_Can_Coalmining_Period" desc="可采期" type="3" index="" unit="月"/>
+        <field name="F_Coalface_Width" desc="采煤面宽度" type="2" index="" unit="mm"/>
+        <field name="F_Coalface_Hight" desc="采煤面高度" type="2" index="" unit="m"/>
+        <field name="F_Coalface_Length" desc="采煤面斜长" type="2" index="" unit="m"/>
+        <field name="F_Workface_Area" desc="工作面面积" type="2" index="" unit="m2"/>
+        <field name="F_Is_Prevent_Outburst" desc="是否防突" type="1" index=""/>
+        <field name="F_Coalmine_Method" desc="采煤方法" type="4" index="" dictionary="BF01-0202KC-CMFF"/>
+        <field name="F_Coalmine_Equipment" desc="采煤装备" type="1" index=""/>
+        <field name="F_Water_Inflow" desc="涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Blowing_Rate" desc="风量" type="2" index="" unit="m3/min"/>
+        <field name="F_Max_Mashgas_Pressure" desc="最大瓦斯压力" type="2" index="" unit="MPa"/>
+        <field name="F_Max_Mashgas_Content" desc="最大瓦斯含量" type="2" index="" unit="m3/t"/>
+        <field name="F_Disembogue_Quantity" desc="涌出量" type="2" index="" unit="m3/min"/>
+        <field name="F_Draft_Type" desc="通风方式" type="4" index="" dictionary="BF01-0201TF-TFFS"/>
+        <field name="F_Mashgas_Prevention_Measures" desc="瓦斯防治措施" type="1" index=""/>
+        <field name="F_Dust_Prevention_Measures" desc="粉尘防治措施" type="1" index=""/>
+        <field name="F_Conflagration_Prevention_Measures" desc="火灾防治措施" type="1" index=""/>
+        <field name="F_Water_Prevention_Measures" desc="水害防治措施" type="1" index=""/>
+        <field name="F_Roof_Management" desc="顶板管理" type="1" index=""/>
+    </table>
+    <table code="category07-0201" name="TB_CoalQualityAnalysis" desc="煤质分析">
+        <field name="F_Sampling_Sites" desc="采样地点" type="1" index=""/>
+        <field name="F_TotalMoisture_Mt" desc="全水分Mt" type="2" index="" unit="%"/>
+        <field name="F_Water_Mad" desc="水分Mad" type="2" index="" unit="%"/>
+        <field name="F_AshContent_Ad" desc="灰分Ad" type="2" index="" unit="%"/>
+        <field name="F_VolatileMatter_Vd" desc="挥发分Vd" type="2" index="" unit="%"/>
+        <field name="F_VolatileMatter_Vdaf" desc="挥发分Vdaf" type="2" index="" unit="%"/>
+        <field name="F_FixedCarbon_FCd" desc="固定碳FCd" type="2" index="" unit="%"/>
+        <field name="F_CharacteristicsOfCinder_CB" desc="焦渣特征CB" type="2" index="" unit="%"/>
+        <field name="F_TotalSulfur_St-d" desc="全硫St·d" type="2" index="" unit="%"/>
+        <field name="F_BarrelHeat_Qb" desc="弹筒发热量Qb" type="2" index="" unit="MJ/kg"/>
+        <field name="F_HighCalorificValueOfDryBase_Qgr·v·ad" desc="干基高位发热量Qgr·v·ad" type="2" index="" unit="MJ/kg"/>
+        <field name="F_TrueRelativeDensity_TRD" desc="真相对密度TRD" type="2" index="" unit=""/>
+        <field name="F_ApparentRelativeDensity_ARD" desc="视相对密度ARD" type="2" index="" unit=""/>
+        <field name="F_Porosity_n" desc="孔隙率n%" type="2" index="" unit="%"/>
+        <field name="F_BulkDensity" desc="容重" type="2" index="" unit=""/>
+        <field name="F_TestUnit" desc="测试单位" type="1" index=""/>
+        <field name="F_TestTime" desc="测试时间" type="5" index=""/>
+        <field name="F_Sampling_Time" desc="采样时间" type="5" index=""/>
+    </table>
+    <table code="category07-0103" name="TB_CoalSample_ShortestFire" desc="火灾(煤样最短自然发火期)">
+        <field name="F_Check_Type" desc="检验类别" type="1" index=""/>
+        <field name="F_FirePeroid" desc="自燃发火期（天）" type="2" index="" unit="天"/>
+        <field name="F_Report" desc="报告附件" type="1" index=""/>
+    </table>
+    <table code="category01-0301" name="TB_CoalseamInfo" desc="煤层">
+        <field name="F_Is_Main_Seam" desc="是否是主采煤层" type="4" index="" dictionary="BF01-0301MC-ZCMC"/>
+        <field name="F_Stratum" desc="所属地层" type="1" index=""/>
+        <field name="F_Coal" desc="煤种" type="4" index="" dictionary="BF01-0301MC-MZLX"/>
+        <field name="F_Seam_Thickness" desc="煤层厚度" type="2" index="" unit="m"/>
+        <field name="F_JGQK" desc="夹矸情况" type="1" index=""/>
+        <field name="F_Seam_Obliquity" desc="煤层倾角" type="2" index="" unit="度"/>
+        <field name="F_Min_Sturdinessr_Ratio" desc="最小坚固性系数f" type="2" index="" unit=""/>
+        <field name="F_Outburst_Danger" desc="突出危险性" type="4" index="" dictionary="BF01-0301MC-TCWX"/>
+        <field name="F_Spontaneous_Combustion_Tendency" desc="自燃发火倾向性" type="4" index="" dictionary="BF01-0301MC-FHQX"/>
+        <field name="F_Dust_Exploding_Risk" desc="煤尘爆炸危险性" type="4" index="" dictionary="BF01-0301MC-BZWX"/>
+        <field name="F_Seam_Impact_Tendency" desc="煤层冲击倾向" type="4" index="" dictionary="BF01-0301MC-CJQX"/>
+        <field name="F_Seam_Breathability_Ratio" desc="煤层透气性系数" type="2" index="" unit=""/>
+        <field name="F_Max_Mashgas_Pressure" desc="最大瓦斯压力" type="2" index="" unit="Pa"/>
+        <field name="F_Max_Mashgas_Content" desc="最大瓦斯含量" type="2" index="" unit=""/>
+        <field name="F_Stabilization" desc="稳定性" type="1" index=""/>
+        <field name="F_System_Region" desc="体系域" type="1" index=""/>
+        <field name="F_Depositional_Environment" desc="沉积环境" type="1" index=""/>
+        <field name="F_Roof_Lithology" desc="顶板岩性" type="1" index=""/>
+        <field name="F_Footwall_Lithology" desc="底板岩性" type="1" index=""/>
+        <field name="F_Seam_Structure" desc="煤层结构" type="1" index=""/>
+        <field name="F_Broken_Degree" desc="破碎程度" type="1" index=""/>
+    </table>
+    <table code="category07-0205" name="TB_CoalseamSampleInfo" desc="煤样信息">
+        <field name="F_Sampling_Spot" desc="取样地点" type="1" index=""/>
+        <field name="F_Datum_Mark" desc="标高" type="2" index="" unit="m"/>
+        <field name="F_Adsorption_Constant_a" desc="吸附常数a" type="2" index="" unit=""/>
+        <field name="F_Adsorption_Constant_b" desc="吸附常数b" type="2" index="" unit=""/>
+        <field name="F_Permeability_Ratio" desc="透气性系数" type="2" index="" unit=""/>
+        <field name="F_Mashgas_Spread_Speed" desc="瓦斯放散初速度（△P）" type="2" index="" unit=""/>
+        <field name="F_Consistence_Ratio" desc="坚固性系数f" type="2" index="" unit=""/>
+        <field name="F_Water_Constituent" desc="水分" type="2" index="" unit=""/>
+        <field name="F_Ash_Content" desc="灰分" type="2" index="" unit=""/>
+        <field name="F_Volatilization_Content" desc="挥发分" type="2" index="" unit=""/>
+        <field name="F_Real_Density" desc="真密度" type="2" index="" unit=""/>
+        <field name="F_Apparent_Density" desc="视密度" type="2" index="" unit=""/>
+        <field name="F_Crevice_Ratio" desc="孔隙率" type="2" index="" unit=""/>
+        <field name="F_Check_Company" desc="检测单位" type="1" index=""/>
+        <field name="F_Check_Time" desc="检测时间" type="5" index=""/>
+    </table>
+    <table code="category04-0102" name="TB_ConstructionReport" desc="施工报告">
+        <field name="F_Profession" desc="专业" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Department" desc="部门" type="1" index=""/>
+        <field name="F_CompletionTime" desc="完成时间" type="5" index=""/>
+        <field name="F_DesignDepartment" desc="设计部门" type="1" index=""/>
+        <field name="F_Designer" desc="设计人员" type="1" index=""/>
+        <field name="F_Abstract" desc="摘要" type="1" index=""/>
+        <field name="F_File" desc="文件" type="1" index=""/>
+    </table>
+    <table code="category04-0101" name="TB_DesignReport" desc="设计报告">
+        <field name="F_Profession" desc="专业" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_Department" desc="部门" type="1" index=""/>
+        <field name="F_CompletionTime" desc="完成时间" type="5" index=""/>
+        <field name="F_DesignDepartment" desc="设计部门" type="1" index=""/>
+        <field name="F_Designer" desc="设计人员" type="1" index=""/>
+        <field name="F_Abstract" desc="摘要" type="1" index=""/>
+        <field name="F_File" desc="文件" type="1" index=""/>
+    </table>
+    <table code="category01-0204" name="TB_DrainageSystem" desc="排水系统">
+        <field name="F_Drainage_Pump_type" desc="主排水泵型号" type="1" index=""/>
+        <field name="F_Drainage_Pump_Num" desc="主排水泵台数" type="3" index="" unit="台"/>
+        <field name="F_Master_Dibhole_Cubage" desc="主水仓容积" type="2" index="" unit="m3"/>
+        <field name="F_Assistant_Dibhole_Cubage" desc="副水仓容积" type="2" index="" unit="m3"/>
+        <field name="F_Average_Waterinflow_InYear" desc="矿井年平均涌水量" type="2" index="" unit="万m3"/>
+    </table>
+    <table code="category03-0502" name="TB_Dustproof_DustCheck" desc="粉尘检测信息">
+        <field name="F_Place" desc="测定地点" type="1" index=""/>
+        <field name="F_Workstage" desc="测定工序" type="1" index=""/>
+        <field name="F_Dust_Characters" desc="粉尘性质" type="1" index=""/>
+        <field name="F_Thickness_HC" desc="呼尘浓度" type="2" index="" unit=""/>
+        <field name="F_Thickness_ZC" desc="总尘浓度" type="2" index="" unit="mg/m3"/>
+        <field name="F_Temperature" desc="温度" type="2" index="" unit=""/>
+        <field name="F_Humidity" desc="湿度" type="2" index="" unit=""/>
+        <field name="F_Coalseam_Quality" desc="沉积煤层质量" type="1" index=""/>
+        <field name="F_Check_Time" desc="测定时间" type="5" index=""/>
+        <field name="F_Dust_Instrument" desc="测尘仪器" type="1" index=""/>
+        <field name="F_Dust_Staff" desc="测尘人员" type="1" index=""/>
+        <field name="F_Dust_QualificationRate" desc="测尘合格率" type="2" index="" unit="%"/>
+        <field name="F_Free_SO2" desc="游离二氧化硅含量" type="2" index="" unit="%"/>
+    </table>
+    <table code="category03-0601" name="TB_Dustproof_DustPhysicalCheck" desc="粉尘物性检测数据">
+        <field name="F_Place" desc="取样地点" type="1" index=""/>
+        <field name="F_Dispersion_Degree" desc="粉尘分散度" type="1" index=""/>
+        <field name="F_Suspended_Solids" desc="粉尘悬浮性" type="1" index=""/>
+        <field name="F_Adsorptivity" desc="粉尘吸附性" type="1" index=""/>
+        <field name="F_Wettability" desc="粉尘湿润性" type="4" index="" dictionary="BF03-0501FC-FCSR"/>
+        <field name="F_Dust_Charge" desc="粉尘荷电性" type="1" index=""/>
+        <field name="F_Chemical" desc="粉尘化学性" type="4" index="" dictionary="BF03-0501FC-FCHX"/>
+        <field name="F_Explosiveness" desc="粉尘爆炸性" type="1" index=""/>
+        <field name="F_Free_SO2" desc="游离SiO2含量" type="2" index="" unit=""/>
+        <field name="F_Mine_Dust_Granularity" desc="矿尘粒度" type="2" index="" unit="um"/>
+        <field name="F_Area_BB" desc="比表面积" type="2" index="" unit="cm2/g"/>
+        <field name="F_AshContent" desc="灰分含量" type="2" index="" unit=""/>
+        <field name="F_Moisture_Content" desc="水分含量" type="2" index="" unit=""/>
+        <field name="F_Volatile_Component" desc="挥发分" type="2" index="" unit=""/>
+        <field name="F_Heat_Value" desc="发热量" type="2" index="" unit=""/>
+        <field name="F_Actual_Density" desc="真密度" type="2" index="" unit=""/>
+        <field name="F_Porosity_Factor" desc="孔隙率" type="2" index="" unit=""/>
+        <field name="F_Coalseam_Groutability" desc="煤层可注性" type="1" index=""/>
+        <field name="F_Coalseam_Hydroscopicity" desc="煤层吸水率" type="1" index=""/>
+        <field name="F_Coalseam_ConsistentCoefficient" desc="煤层坚固性系数" type="2" index="" unit=""/>
+        <field name="F_ContactAngle" desc="接触角" type="2" index="" unit=""/>
+        <field name="F_Density_Z" desc="祝密度" type="2" index="" unit=""/>
+        <field name="F_Elemental_Analysis" desc="元素分析" type="1" index=""/>
+    </table>
+    <table code="category03-0503" name="TB_Dustproof_WorkerDustArchive" desc="工人接尘档案">
+        <field name="F_Staff_Name" desc="工人姓名" type="1" index=""/>
+        <field name="F_Department" desc="所属部门" type="1" index=""/>
+        <field name="F_No" desc="矿工编号" type="1" index=""/>
+        <field name="F_CheckResult" desc="体检结果" type="1" index=""/>
+        <field name="F_Historical_Disease" desc="历史病症" type="1" index=""/>
+        <field name="F_Breathe_Historical_Disease" desc="呼吸系统过往病史" type="1" index=""/>
+        <field name="F_Check_Period" desc="体检周期" type="2" index="" unit="天"/>
+        <field name="F_Check_Time" desc="体检时间" type="5" index=""/>
+        <field name="F_Everyday_Dust_Time" desc="每天接尘时间" type="2" index="" unit="h"/>
+        <field name="F_Total_Dust_Time" desc="累计接尘时间" type="2" index="" unit="h"/>
+    </table>
+    <table code="category01-0206" name="TB_ElectromechanicalSystem" desc="机电系统">
+        <field name="F_Capacity_Factor" desc="变压器功率" type="2" index="" unit="KW"/>
+        <field name="F_FDWSDBS" desc="风电瓦斯电闭锁" type="1" index=""/>
+        <field name="F_Twocircuit_Current_Supply" desc="双回路供电情况" type="1" index=""/>
+        <field name="F_Voltage_Changer_Num" desc="主变压器台数" type="3" index="" unit="台"/>
+        <field name="F_Voltage_Changer_Model" desc="主变压器型号" type="1" index=""/>
+        <field name="F_SZLBS_Situation" desc="“三专两闭锁”情况" type="1" index=""/>
+    </table>
+    <table code="category01-0101" name="TB_EnterpriseInfo" desc="企业信息">
+        <field name="F_Province" desc="省份" type="1" index=""/>
+        <field name="F_City" desc="市" type="1" index=""/>
+        <field name="F_County" desc="县（区）" type="1" index=""/>
+        <field name="F_Town" desc="镇" type="1" index=""/>
+        <field name="F_EName" desc="企业名称" type="1" index=""/>
+        <field name="F_Detailed_Addr" desc="详细地址" type="1" index=""/>
+        <field name="F_Enterprise_Property" desc="企业性质" type="4" index="" dictionary="BF01-0102MK-QYXZ"/>
+        <field name="F_Popedom" desc="所属辖区" type="1" index=""/>
+        <field name="F_Location" desc="经纬点范围，依据所辖矿区范围" type="1" index=""/>
+        <field name="F_Supervise_Coalmine" desc="所辖矿区" type="1" index=""/>
+    </table>
+    <table code="category04-0103" name="TB_EvaluationReport" desc="评价报告">
+        <field name="F_Profession" desc="专业" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_OrganizationUnit" desc="编制单位" type="1" index=""/>
+        <field name="F_CompletionTime" desc="完成时间" type="5" index=""/>
+        <field name="F_Abstract" desc="摘要" type="1" index=""/>
+        <field name="F_MainContent" desc="主要内容" type="1" index=""/>
+        <field name="F_PrimaryTarget" desc="主要目标" type="1" index=""/>
+        <field name="F_Conclusion" desc="结论" type="1" index=""/>
+        <field name="F_File" desc="文件" type="1" index=""/>
+    </table>
+    <table code="category01-0202" name="TB_ExploitInfo" desc="开采信息">
+        <field name="F_Exploit_Mode" desc="开采方式" type="4" index="" dictionary="BF01-0202KC-KTFS"/>
+        <field name="F_Exploit_Deepth" desc="开采深度" type="2" index="" unit="m"/>
+        <field name="F_Exploit_Method" desc="采煤方法" type="4" index="" dictionary="BF01-0202KC-CMFF"/>
+        <field name="F_Tunnelling_Mode" desc="掘进方式" type="4" index="" dictionary="BF01-0202KC-JJFS"/>
+        <field name="F_Roof_Control" desc="顶板管理" type="1" index=""/>
+        <field name="F_Corrent_Exploit_Height" desc="现开采煤层盖度" type="2" index="" unit="m"/>
+        <field name="F_Current_Tunnelling_Num" desc="当前掘进面数量" type="3" index="" unit="个"/>
+        <field name="F_Current_Backstoping_Num" desc="当前回采面数量" type="3" index="" unit="个"/>
+        <field name="F_Pitshaft_Num" desc="井筒数量" type="3" index="" unit="个"/>
+        <field name="F_Enter_Air_Mine_Num" desc="进风井数" type="3" index="" unit="个"/>
+        <field name="F_Return_Air_Mine_Num" desc="回风井数" type="3" index="" unit="个"/>
+    </table>
+    <table code="category01-0203" name="TB_ExtractionInfo" desc="抽采信息">
+        <field name="F_Resources_Capacity" desc="资源量" type="2" index="" unit="Mm3"/>
+        <field name="F_Extraction_Capacity" desc="抽采量" type="2" index="" unit="Mm3"/>
+        <field name="F_Extraction_Method" desc="主要抽采方法" type="4" index=""/>
+        <field name="F_Desgin_Extraction_Capacity" desc="设计抽采能力" type="2" index="" unit=""/>
+        <field name="F_Pumptype_Num" desc="主要泵型号" type="1" index=""/>
+        <field name="F_Pipeline_Diameter" desc="主管管径" type="2" index="" unit="mm"/>
+        <field name="F_Extraction_Negative_Pressure" desc="抽放负压" type="2" index="" unit="Kpa"/>
+        <field name="F_Extraction_Capacity_InYear" desc="年抽采纯量" type="2" index="" unit="万m3"/>
+        <field name="F_Mashgas_Extraction_Consistence" desc="瓦斯抽采浓度" type="2" index="" unit="%"/>
+        <field name="F_Used_Capacity_InYear" desc="核定年利用量" type="2" index="" unit="万m3"/>
+        <field name="F_Operating_Factor" desc="利用率" type="2" index="" unit="%"/>
+        <field name="F_Used_Mode" desc="利用方式" type="4" index="" dictionary="BF01-0203CC-LLFS"/>
+    </table>
+    <table code="category01-0304" name="TB_Faultage" desc="断层">
+        <field name="F_Name" desc="断层名称" type="1" index=""/>
+        <field name="F_Fallhead" desc="落差" type="2" index="" unit="m"/>
+        <field name="F_Movetowards" desc="走向" type="1" index=""/>
+        <field name="F_Length" desc="长度" type="2" index="" unit="m"/>
+        <field name="F_Obliquity" desc="倾角" type="2" index="" unit="度"/>
+        <field name="F_Faultage_Property" desc="断层性质" type="4" index="" dictionary="BF01-0304DC-DCXZ"/>
+        <field name="F_Dynam_Property" desc="力学性质" type="4" index="" dictionary="BF01-0304DC-LXXZ"/>
+        <field name="F_Source" desc="来源" type="4" index="" dictionary="BF01-0304DC-DCLY"/>
+        <field name="F_Incidence" desc="影响范围" type="1" index=""/>
+    </table>
+    <table code="category07-0104" name="TB_FireFlag_KPI_Check" desc="火灾(煤自然发火标志气体指标测定)">
+        <field name="F_Check_Type" desc="检验类别" type="1" index=""/>
+        <field name="F_Conclusion" desc="结论" type="1" index=""/>
+        <field name="F_Report" desc="报告附件" type="1" index=""/>
+    </table>
+    <table code="category03-0401" name="TB_Fireproofing_Check" desc="防灭火检查台账">
+        <field name="F_Check_Time" desc="检查时间" type="5" index=""/>
+        <field name="F_Check_Place" desc="检查地点" type="1" index=""/>
+        <field name="F_Thickness_CO" desc="CO" type="2" index="" unit="ppm"/>
+        <field name="F_Thickness_CH4" desc="CH4" type="2" index="" unit="%"/>
+        <field name="F_Thickness_CO2" desc="CO2" type="2" index="" unit="%"/>
+        <field name="F_Temperature" desc="温度" type="2" index="" unit="℃"/>
+        <field name="F_Thickness_O2" desc="氧气" type="2" index="" unit="%"/>
+    </table>
+    <table code="category03-0403" name="TB_Fireproofing_FireRegionManage" desc="火区管理卡片">
+        <field name="F_No" desc="火区编号" type="1" index=""/>
+        <field name="F_Time" desc="发火日期" type="5" index=""/>
+        <field name="F_Reason" desc="发火原因" type="1" index=""/>
+        <field name="F_Place" desc="发火位置" type="1" index=""/>
+        <field name="F_Range" desc="发火范围" type="1" index=""/>
+        <field name="F_Wall_Structure" desc="密闭墙结构" type="1" index=""/>
+        <field name="F_Wall_Thickness" desc="密闭墙厚度" type="2" index="" unit="mm"/>
+        <field name="F_Outfire_Process" desc="灭火处理过程" type="1" index=""/>
+        <field name="F_Grout_Capacity" desc="灌浆量" type="2" index="" unit=""/>
+        <field name="F_Air_Composition" desc="空气成分" type="1" index=""/>
+        <field name="F_Temperature" desc="温度" type="2" index="" unit="℃"/>
+        <field name="F_LocationSketchMap" desc="火区位置示意图" type="1" index=""/>
+        <field name="F_Building_Materials" desc="建筑材料" type="1" index=""/>
+    </table>
+    <table code="category03-0402" name="TB_Fireproofing_ObturationCheck" desc="防火密闭检查台账">
+        <field name="F_No" desc="密闭编号" type="1" index=""/>
+        <field name="F_Place" desc="密闭地点" type="1" index=""/>
+        <field name="F_Material" desc="砌筑材料" type="1" index=""/>
+        <field name="F_Pre_Obturation_Laneway" desc="密闭前巷道" type="1" index=""/>
+        <field name="F_Pre_Obturation_CO" desc="密闭前CO" type="2" index="" unit="ppm"/>
+        <field name="F_Pre_Obturation_CH4" desc="密闭前CH4" type="2" index="" unit="%"/>
+        <field name="F_Pre_Obturation_Temperature" desc="密闭前温度" type="2" index="" unit="℃"/>
+        <field name="F_Pre_Obturation_CO2" desc="密闭前CO2" type="2" index="" unit="%"/>
+        <field name="F_Aft_Obturation_CO" desc="密闭后CO" type="2" index="" unit="ppm"/>
+        <field name="F_Aft_Obturation_CH4" desc="密闭后CH4" type="2" index="" unit="%"/>
+        <field name="F_Aft_Obturation_Temperature" desc="密闭后温度" type="2" index="" unit="℃"/>
+        <field name="F_Aft_Obturation_CO2" desc="密闭后CO2" type="2" index="" unit="%"/>
+        <field name="F_Anti_Pool" desc="反水池" type="1" index=""/>
+        <field name="F_Water_Temperature" desc="水温" type="2" index="" unit="℃"/>
+        <field name="F_Check_Time" desc="检查时间" type="5" index=""/>
+    </table>
+    <table code="category03-0404" name="TB_Fireproofing_SampleSurvey" desc="火灾束管采样监测">
+        <field name="F_Place" desc="监测地点" type="1" index=""/>
+        <field name="F_Time" desc="监测时间" type="5" index=""/>
+        <field name="F_Consistence_CO" desc="CO" type="2" index="" unit="%"/>
+        <field name="F_Consistence_CO2" desc="CO2" type="2" index="" unit="%"/>
+        <field name="F_Consistence_CH4" desc="CH4" type="2" index="" unit="%"/>
+        <field name="F_Consistence_C2H4" desc="C2H4" type="2" index="" unit="%"/>
+        <field name="F_Consistence_C2H6" desc="C2H6" type="2" index="" unit="%"/>
+        <field name="F_Consistence_C2H2" desc="C2H2" type="2" index="" unit="%"/>
+        <field name="F_Consistence_O2" desc="O2" type="2" index="" unit="%"/>
+        <field name="F_Consistence_N2" desc="N2" type="2" index="" unit="%"/>
+    </table>
+    <table code="category03-0206" name="TB_Mashgas_AnnualExtractionInfo" desc="瓦斯抽采(年度抽采信息)">
+        <field name="F_Year" desc="年份" type="1" index=""/>
+        <field name="F_Extraction_Thickness" desc="瓦斯抽采浓度" type="2" index="" unit=""/>
+        <field name="F_Extraction_Rate" desc="瓦斯抽采率" type="2" index="" unit="%"/>
+        <field name="F_Operating_Factor" desc="利用率" type="2" index="" unit="%"/>
+        <field name="F_Sys_Design_Ability" desc="系统设计能力" type="1" index="" />
+        <field name="F_Main_Pump_Model_Num" desc="主要泵型号" type="1" index=""/>
+        <field name="F_Main_Pipeline_Diameter" desc="主管管径" type="2" index="" unit="mm"/>
+        <field name="F_Extraction_Negative_Pressure" desc="抽放负压" type="2" index="" unit=""/>
+        <field name="F_Main_Extraction_Method" desc="主要抽采方法" type="1" index=""/>
+        <field name="F_Annual_Extraction_Num" desc="年抽采纯量" type="2" index="" unit="万吨"/>
+    </table>
+    <table code="category03-0210" name="TB_Mashgas_Check" desc="瓦斯检测">
+        <field name="F_Year" desc="年份" type="1" index=""/>
+        <field name="F_Time" desc="时间" type="5" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+        <field name="F_Coalmine_Area" desc="所属采区" type="1" index=""/>
+        <field name="F_Thickness_CH4" desc="CH4浓度" type="2" index="" unit="%"/>
+        <field name="F_Blowing_Rate" desc="风量" type="2" index="" unit="m3/min"/>
+        <field name="F_Extraction_Quantity" desc="抽采量" type="2" index="m3/min"/>
+        <field name="F_Daily_Production" desc="日产量" type="2" index="" unit="t"/>
+        <field name="F_Mashgas_Emission_Rate_A" desc="绝对瓦斯涌出量" type="2" index="" unit="m3/min"/>
+        <field name="F_Mashgas_Emission_Rate_R" desc="相对瓦斯涌出量" type="2" index="" unit="m3/t"/>
+    </table>
+    <table code="category03-0208" name="TB_Mashgas_CoalseamGasResInfo" desc="瓦斯抽采(煤层气资源信息)">
+        <field name="F_Breathability_Ratio" desc="透气性系数" type="2" index="" unit="mD"/>
+        <field name="F_Coal_Reserves" desc="煤炭储量" type="2" index="" unit="Mt"/>
+        <field name="F_Reserves" desc="含量小于8m3/t地质储量" type="2" index="" unit="Mm3"/>
+        <field name="F_Breathability_Reserves" desc="透气性小于0.1mD可抽量" type="2" index="" unit="Mm3"/>
+        <field name="F_Coalseam_Gas_Content" desc="煤层气含量" type="2" index="" unit="m3/t"/>
+        <field name="F_Coalseam_Gas_Pressure" desc="煤层气压力" type="2" index="" unit="MPa"/>
+        <field name="F_Bore_Flow_Damping_Ratio" desc="钻孔流量衰减系数" type="2" index="" unit=""/>
+        <field name="F_Coalseam_Gas_Reserves" desc="煤层气地质储量" type="2" index="" unit="Mm3"/>
+        <field name="F_Coalseam_Extraction_Reserves" desc="煤层气可抽量" type="2" index="" unit="Mm3"/>
+        <field name="F_Extraction_Reserves" desc="含量小于8m3/t可抽量" type="2" index="" unit="Mm3"/>
+        <field name="F_Breathability_Extraction_Reserves" desc="透气性小于0.1mD地质储量" type="2" index="" unit="Mm3"/>
+    </table>
+    <table code="category03-0207" name="TB_Mashgas_ExtractionAppraise" desc="瓦斯抽采(抽采评价)">
+        <field name="F_Extraction_Region" desc="抽采区域" type="1" index=""/>
+        <field name="F_Extraction_Area" desc="抽采面积" type="2" index="" unit="m2"/>
+        <field name="F_Begin_Time" desc="抽采开始时间" type="5" index=""/>
+        <field name="F_End_Time" desc="抽采结束时间" type="5" index=""/>
+        <field name="F_Extraction_Mode" desc="抽采方式" type="1" index=""/>
+        <field name="F_Original_Mashgas_Pressure" desc="原始瓦斯压力" type="2" index="" unit="Pa"/>
+        <field name="F_Original_Mashgas_Content" desc="原始瓦斯含量" type="2" index="" unit="m3/min"/>
+        <field name="F_Coal_Reserves" desc="煤炭储量" type="2" index="" unit="万吨"/>
+        <field name="F_Mashgas_Reserves" desc="瓦斯储量" type="2" index="" unit="万m3"/>
+        <field name="F_Wind_Mashgas_Quantity" desc="风排瓦斯量" type="2" index="" unit="万m3"/>
+        <field name="F_Bore_Total_Quantity" desc="钻孔总工程量" type="2" index="" unit="万m"/>
+        <field name="F_Sealing_Length" desc="封孔长度" type="2" index="" unit="m"/>
+        <field name="F_Sealing_Material" desc="封孔材料" type="1" index=""/>
+        <field name="F_Mashgas_Extraction_Quantity" desc="瓦斯抽采量" type="2" index="" unit="万m3"/>
+        <field name="F_CoalBore_Total_Quantity" desc="吨煤钻孔工程量" type="2" index="" unit="m/t"/>
+        <field name="F_PreExtraction_Time" desc="预抽期" type="2" index="" unit="月"/>
+        <field name="F_PreExtraction_Rate" desc="预抽率" type="2" index="" unit="%"/>
+        <field name="F_After_Extraction_MashGas_Content" desc="抽采后瓦斯含量" type="2" index="" unit="m3/min"/>
+        <field name="F_After_Extraction_MashGas_Pressure" desc="抽采后瓦斯压力" type="2" index="" unit="Pa"/>
+        <field name="F_Region_Blank_Situation" desc="区域空白带情况" type="1" index=""/>
+    </table>
+    <table code="category03-0205" name="TB_Mashgas_ExtractionMonitor" desc="瓦斯抽采(抽采监测)">
+        <field name="F_No" desc="抽放泵编号" type="1" index=""/>
+        <field name="F_Monitor_Time" desc="监测时间" type="5" index=""/>
+        <field name="F_Thickness" desc="浓度" type="2" index="" unit="%"/>
+        <field name="F_Temperature" desc="温度" type="2" index="" unit="℃"/>
+        <field name="F_Pressure" desc="压力" type="2" index="" unit="Pa"/>
+        <field name="F_Mixed_FlowRate" desc="混合流量" type="2" index="" unit="m3/min"/>
+        <field name="F_Pure_FlowRate" desc="纯流量" type="2" index="" unit="m3/min"/>
+    </table>
+    <table code="category03-0211" name="TB_Mashgas_GasBrustDailyCheck" desc="瓦斯突出(日常检测数据)">
+        <field name="F_Time" desc="日期" type="1" index=""/>
+        <field name="F_Work_Mode" desc="作业方式" type="1" index=""/>
+        <field name="F_K1" desc="k1" type="2" index="" unit=""/>
+        <field name="F_H2" desc="h2" type="2" index="" unit=""/>
+        <field name="F_S" desc="s" type="2" index="" unit=""/>
+        <field name="F_Q" desc="q" type="2" index="" unit=""/>
+        <field name="F_Power_Phenomenon" desc="动力现象" type="4" index="" dictionary="BF03-0211TC-DLXX"/>
+        <field name="F_Occurrence_Change" desc="赋存变化" type="4" index="" dictionary="BF03-0211TC-FCBH"/>
+        <field name="F_Mashgas_Thickness" desc="瓦斯浓度" type="2" index="" unit=""/>
+        <field name="F_DirtBand_Thickness" desc="夹矸厚度" type="2" index="" unit=""/>
+        <field name="F_Mine_Area" desc="采区" type="1" index=""/>
+        <field name="F_Cutting_Distance" desc="距开口（切眼）距离" type="2" index="" unit="m"/>
+    </table>
+    <table code="category03-0212" name="TB_Mashgas_GasBrustRegionCheck" desc="瓦斯突出(区域检测指标)">
+        <field name="F_Time" desc="时间" type="5" index=""/>
+        <field name="F_Coalseam_Area" desc="采区" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+        <field name="F_Remain_Mashgas_Pressure" desc="残存瓦斯压力" type="2" index="" unit=""/>
+        <field name="F_Remain_Mashgas_Content" desc="残存瓦斯含量" type="2" index="" unit=""/>
+        <field name="F_Roof_Displacement" desc="顶板位移量" type="2" index="" unit=""/>
+        <field name="F_Other" desc="其他指标" type="1" index=""/>
+    </table>
+    <table code="category03-0202" name="TB_Mashgas_OriginalContentCal" desc="瓦斯赋存(原始瓦斯含量推算)">
+        <field name="F_No" desc="含量点编号（名称）" type="1" index=""/>
+        <field name="F_Place" desc="采样位置" type="1" index=""/>
+        <field name="F_DatumMark" desc="标高" type="2" index="" unit="m"/>
+        <field name="F_Mad" desc="Mad" type="2" index="" unit="%"/>
+        <field name="F_Aad" desc="Aad" type="2" index="" unit="%"/>
+        <field name="F_Mashgas_Pressure" desc="原煤瓦斯压力" type="2" index="" unit="MPa"/>
+        <field name="F_a" desc="a" type="2" index="" unit="m3/t"/>
+        <field name="F_b" desc="b" type="2" index="" unit="MPa-1"/>
+        <field name="F_Mashgas_Content" desc="瓦斯含量" type="2" index="" unit="m3/t"/>
+    </table>
+    <table code="category03-0201" name="TB_Mashgas_OriginalContentMeasure" desc="瓦斯赋存(原始瓦斯含量实测)">
+        <field name="F_No" desc="含量点编号（名称）" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+        <field name="F_Depth" desc="埋深" type="2" index="" unit="m"/>
+        <field name="F_Survey_Stage" desc="探测阶段" type="1" index=""/>
+        <field name="F_Mensurate_Time" desc="测定时间" type="5" index=""/>
+        <field name="F_Mensurate_Department" desc="测定单位" type="1" index=""/>
+        <field name="F_Datum_Mark" desc="标高" type="2" index="" unit="m"/>
+        <field name="F_Mashgas_Content" desc="含量" type="2" index="" unit="m3/t"/>
+    </table>
+    <table code="category03-0204" name="TB_Mashgas_OriginalPressureCal" desc="瓦斯赋存(原始瓦斯压力推算)">
+        <field name="F_No" desc="压力点编号（名称）" type="1" index=""/>
+        <field name="F_Place" desc="采样位置" type="1" index=""/>
+        <field name="F_Mad" desc="Mad" type="2" index="" unit="%"/>
+        <field name="F_Aad" desc="Aad" type="2" index="" unit="%"/>
+        <field name="F_Mashgas_Content" desc="原煤瓦斯含量" type="2" index="" unit="m3/t"/>
+        <field name="F_a" desc="a" type="2" index="" unit="m3/t"/>
+        <field name="F_b" desc="b" type="2" index="" unit="MPa-1"/>
+        <field name="F_Mashgas_Pressure" desc="瓦斯压力" type="2" index="" unit="MPa"/>
+        <field name="F_Datum_Mark" desc="标高" type="2" index="" unit="m"/>
+    </table>
+    <table code="category03-0203" name="TB_Mashgas_OriginalPressureMeasure" desc="瓦斯赋存(原始瓦斯压力实测)">
+        <field name="F_No" desc="压力点编号（名称）" type="1" index=""/>
+        <field name="F_Place" desc="地点" type="1" index=""/>
+        <field name="F_Depth" desc="埋深" type="2" index="" unit="m"/>
+        <field name="F_Pressure" desc="压力" type="2" index="" unit="Pa"/>
+        <field name="F_Survey_Stage" desc="探测阶段" type="1" index=""/>
+        <field name="F_Mensurate_Time" desc="测定时间" type="5" index=""/>
+        <field name="F_Mensurate_Department" desc="测定单位" type="1" index=""/>
+        <field name="F_Datum_Mark" desc="标高" type="2" index="" unit="m"/>
+    </table>
+    <table code="category03-0209" name="TB_Mashgas_Utilization" desc="瓦斯利用">
+        <field name="F_Year" desc="年份" type="1" index=""/>
+        <field name="F_Utilization_Ratio" desc="利用率" type="2" index="" unit="Mm3"/>
+        <field name="F_Demos_Utilization_Ratio" desc="民用利用量" type="2" index="" unit="Mm3)"/>
+        <field name="F_Demos_Amount" desc="民用户数" type="3" index="" unit="户"/>
+        <field name="F_Installed_Content_G" desc="装机容量" type="2" index="" unit="kW"/>
+        <field name="F_Utilization_Amount_G" desc="利用量" type="2" index="" unit="Mm3"/>
+        <field name="F_Installed_Content_L" desc="装机容量" type="2" index="" unit="kW"/>
+        <field name="F_Utilization_Amount_L" desc="利用量" type="2" index="" unit="Mm3"/>
+        <field name="F_Thickness_G" desc="浓度＞30%利用量" type="2" index="" unit="Mm3"/>
+        <field name="F_Thickness_L" desc="浓度＜30%利用量" type="2" index="" unit="Mm3"/>
+        <field name="F_Extraction_Reserves_Year" desc="年抽采量" type="2" index="" unit="Mm3"/>
+        <field name="F_Utilization_Reserves_Year" desc="年利用量" type="2" index="" unit="Mm3"/>
+        <field name="F_Other_Utilization_Amount" desc="其他利用量" type="2" index="" unit="Mm3"/>
+    </table>
+    <table code="category07-0202" name="TB_MashgasCoefficient" desc="瓦斯系数">
+        <field name="F_Sampling_Sites" desc="采样地点" type="1" index=""/>
+        <field name="F_P" desc="△P" type="2" index="" unit=""/>
+        <field name="F_f" desc="f值" type="2" index="" unit=""/>
+        <field name="F_Permeability_Coefficient" desc="煤层透气性系数λ" type="2" index="" unit=""/>
+        <field name="F_a" desc="a" type="2" index="" unit="m3/t"/>
+        <field name="F_b" desc="b" type="2" index="" unit="MPa-1"/>
+        <field name="F_TestUnit" desc="测试单位" type="1" index=""/>
+        <field name="F_TestTime" desc="测试时间" type="5" index=""/>
+    </table>
+    <table code="category07-0203" name="TB_MashgasDegree" desc="瓦斯等级鉴定">
+        <field name="F_Identification_Time" desc="鉴定年份" type="3" index="" unit="年"/>
+        <field name="F_Approved_Production_Capacity" desc="核定生产能力" type="2" index="" unit="万吨"/>
+        <field name="F_Absolute_Emission" desc="瓦斯绝对涌出量" type="2" index="" unit="m3/min"/>
+        <field name="F_Relative_Emission" desc="瓦斯相对涌出量" type="2" index="" unit="m3/t"/>
+        <field name="F_Absolute_Emission_CO2" desc="二氧化碳绝对涌出量" type="2" index="" unit="m3/min"/>
+        <field name="F_Relative_Emission_CO2" desc="二氧化碳相对涌出量" type="2" index="" unit="m3/t"/>
+        <field name="F_Real_Work_Days" desc="月实际工作天数" type="3" index="" unit="d"/>
+        <field name="F_Coal_Amount" desc="月产煤量" type="2" index="" unit="t"/>
+        <field name="F_Mine_Mashgas_Level" desc="矿井瓦斯等级" type="4" index="" dictionary="BF01-0303WS-WSDJ"/>
+        <field name="F_Min_Catch_Fire_Days" desc="开采煤层最短发火期" type="3" index="" unit="d"/>
+        <field name="F_Natural_Catch_Fire" desc="自燃发火倾向性" type="4" index="" dictionary="BF01-0303WS-FHQX"/>
+        <field name="F_Dust_Explosion" desc="煤尘爆炸性" type="4" index="" dictionary="BF01-0303WS-MCBZ"/>
+    </table>
+    <table code="category01-0501" name="TB_MashgasInfo" desc="瓦斯信息">
+        <field name="F_Statistics_Year" desc="统计年份" type="5" index=""/>
+        <field name="F_Absolute_Emission" desc="瓦斯绝对涌出量" type="2" index="" unit="m3/min"/>
+        <field name="F_Relative_Emission" desc="瓦斯相对涌出量" type="2" index="" unit="m3/t"/>
+        <field name="F_Absolute_Emission_CO2" desc="二氧化碳绝对涌出量" type="2" index="" unit="m3/min"/>
+        <field name="F_Relative_Emission_CO2" desc="二氧化碳相对涌出量" type="2" index="" unit="m3/t"/>
+        <field name="F_Mashgas_Content" desc="煤层瓦斯含量" type="2" index="" unit="m3/t"/>
+        <field name="F_Mashgas_Pressure" desc="煤层瓦斯压力" type="2" index="" unit="MPa"/>
+        <field name="F_Ventilate_Rate" desc="透气性系数" type="2" index="" unit=""/>
+        <field name="F_Adsorption_Constant_A" desc="吸附常数a" type="2" index="" unit=""/>
+        <field name="F_Adsorption_Constant_B" desc="吸附常数b" type="2" index="" unit=""/>
+        <field name="F_Initial_Velocity" desc="瓦斯放散初速度△p" type="2" index="" unit=""/>
+    </table>
+    <table code="category01-0205" name="TB_MonitoredControlSystem" desc="监控系统">
+        <field name="F_System_Model_Num" desc="系统型号" type="1" index=""/>
+        <field name="F_branch_Station_Model_Num" desc="分站型号" type="1" index=""/>
+        <field name="F_branch_Station_Num" desc="分站数量" type="3" index="" unit="个"/>
+        <field name="F_Sensor_Num" desc="传感器数量" type="3" index="" unit="个"/>
+        <field name="F_Orientation_System_Model" desc="人员定位系统型号" type="1" index=""/>
+        <field name="F_Monitored_System_Model" desc="产量监控系统型号" type="1" index=""/>
+    </table>
+    <table code="category03-0603" name="TB_Monocase_ThreeObserve" desc="单体支柱工作面矿压三量观测">
+        <field name="F_Observation_Date" desc="观测日期" type="5" index=""/>
+        <field name="F_Measuring_Point_Number" desc="测点编号" type="1" index=""/>
+        <field name="F_Time" desc="时间" type="5" index=""/>
+        <field name="F_Off_Coal_Wall" desc="距煤壁" type="2" index="" unit="m"/>
+        <field name="F_From_The_Goaf" desc="距老塘" type="2" index="" unit="m"/>
+        <field name="F_TopAndBottom_Shift_Close_Reading" desc="顶底板移近量读数" type="2" index="" unit="mm"/>
+        <field name="F_Take_Compression_Column" desc="柱冒压缩量" type="2" index="" unit="mm"/>
+        <field name="F_Press_In_Floor" desc="压入底板量" type="2" index="" unit="mm"/>
+        <field name="F_Strut_Load" desc="支柱载荷" type="2" index="" unit="KN"/>
+        <field name="F_Production_Process" desc="生产工序" type="1" index=""/>
+        <field name="F_Remarks" desc="备注" type="1" index=""/>
+        <field name="F_Dynamometer_No" desc="测力计号" type="1" index=""/>
+    </table>
+    <table code="category01-0311" name="TB_ProtectCoalpillar" desc="保护煤柱">
+        <field name="F_Coalpillar_Num" desc="煤柱编号" type="1" index=""/>
+        <field name="F_Coalpillar_Property" desc="煤柱性质" type="1" index=""/>
+        <field name="F_Position" desc="层位" type="1" index=""/>
+        <field name="F_Trend_Length" desc="走向长" type="2" index="" unit="m"/>
+        <field name="F_Inclined_Length" desc="斜长" type="2" index="" unit="m"/>
+        <field name="F_Thickness" desc="厚度" type="2" index="" unit="m"/>
+        <field name="F_Area" desc="面积" type="2" index="" unit="m2"/>
+        <field name="F_Obliquity" desc="倾角" type="2" index="" unit="度"/>
+        <field name="F_Reserves" desc="储量" type="2" index="" unit="t"/>
+        <field name="F_Check_Apartment" desc="审批机关" type="1" index=""/>
+        <field name="F_Check_Count" desc="批准量" type="2" index="" unit="t"/>
+        <field name="F_Check_Time" desc="批准时间" type="5" index=""/>
+        <field name="F_Coalpillar_Setting_Time" desc="煤柱留设时间" type="2" index="" unit="d"/>
+        <field name="F_Check_Reference_Num" desc="批准文号" type="1" index=""/>
+        <field name="F_Sale_Count" desc="煤柱摊销量" type="2" index="" unit="万吨"/>
+        <field name="F_CCL" desc="采出量" type="2" index="" unit="t"/>
+        <field name="F_FCL" desc="复采量" type="2" index="" unit="t"/>
+        <field name="F_Coalpillar_Form" desc="煤柱形态" type="1" index=""/>
+    </table>
+    <table code="category03-0601" name="TB_RockBurstLog" desc="冲击地压记录">
+        <field name="F_Number" desc="编号" type="1" index=""/>
+        <field name="F_Magnitude" desc="震级" type="4" index="" dictionary="BF03-0601KY-ZJ"/>
+        <field name="F_General_Rock_Burst_Times" desc="一般冲击地压次数" type="3" index="" unit="次"/>
+        <field name="F_Destructive_Rock_Burst_Times" desc="破坏性冲击地压次数" type="3" index="" unit="次"/>
+        <field name="F_RockBurst_Accidents_Times" desc="冲击地压事故次数" type="3" index="" unit="次"/>
+        <field name="F_Statistical_Time" desc="统计时间" type="2" index="" unit="天"/>
+    </table>
+    <table code="category05-0101" name="TB_SafetyProductionFile" desc="安全生产图件">
+        <field name="F_MName" desc="图件名称" type="1" index=""/>
+        <field name="F_Type" desc="图件类型" type="4" index=""/>
+        <field name="F_Date" desc="编制日期" type="5" index=""/>
+        <field name="F_Department" desc="部门" type="1" index=""/>
+        <field name="F_File" desc="文件" type="1" index=""/>
+        <field name="F_Format" desc="图件格式 CAD、PDF、图片、其他" type="1" index=""/>
+        <field name="F_Submission_Date" desc="提交日期" type="5" index=""/>
+    </table>
+    <table code="category04-0105" name="TB_ScientificResearchProject" desc="科研项目">
+        <field name="F_Profession" desc="专业" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_UndertakeUnit" desc="承担单位" type="1" index=""/>
+        <field name="F_CompletionTime" desc="完成时间" type="5" index=""/>
+        <field name="F_Abstract" desc="摘要" type="1" index=""/>
+        <field name="F_PrimaryTarget" desc="主要目标" type="1" index=""/>
+        <field name="F_MainContent" desc="主要内容" type="1" index=""/>
+        <field name="F_Conclusion" desc="结论" type="1" index=""/>
+        <field name="F_File" desc="文件" type="1" index=""/>
+        <field name="F_ProjectStatus" desc="项目状态" type="1" index=""/>
+    </table>
+    <table code="category03-0602" name="TB_SurportHydraumatic_ThreeObserve" desc="支撑液压支架工作面矿压三量观测">
+        <field name="F_QLDZJJ" desc="前梁短柱夹角" type="2" index="" unit="°"/>
+        <field name="F_Remarks" desc="备注" type="1" index=""/>
+        <field name="F_Observation_Date" desc="观测日期" type="5" index=""/>
+        <field name="F_Frame_Number" desc="架号" type="1" index=""/>
+        <field name="F_Working_Procedure" desc="工序" type="1" index=""/>
+        <field name="F_Mining_Height" desc="采高" type="2" index="" unit="m"/>
+        <field name="F_Distance_To_Coal" desc="至煤炭距离" type="2" index="" unit="m"/>
+        <field name="F_Roof_Drift_Reading" desc="顶板移近量读数" type="2" index="" unit="mm"/>
+        <field name="F_The_Left_Front_Pillar_Under_Shrinkage" desc="左前柱下缩" type="2" index="" unit="mm"/>
+        <field name="F_Left_Anterior_Column_Pressure" desc="左前柱压力" type="2" index="" unit="Mpa"/>
+        <field name="F_Retraction_Right_Anterior_Column" desc="右前柱下缩" type="2" index="" unit="mm"/>
+        <field name="F_Right_Front_Column_Pressure" desc="右前柱压力" type="2" index="" unit="Mpa"/>
+        <field name="F_TheLeft_Posterior_Inferior_Constrictor" desc="左后柱下缩" type="2" index="" unit="mm"/>
+        <field name="F_Left_Posterior_Pressure" desc="左后柱压力" type="2" index="" unit="Mpa"/>
+        <field name="F_Right_Posterior_Column_Retraction" desc="右后柱下缩" type="2" index="" unit="mm"/>
+        <field name="F_Right_Posterior_Column_Pressure" desc="右后柱压力" type="2" index="" unit="Mpa"/>
+        <field name="F_FrontBeam_Short_Column_Pressure" desc="前梁短柱压力" type="2" index="" unit="Mpa"/>
+    </table>
+    <table code="category04-0104" name="TB_TechnicalAchievement" desc="技术成果">
+        <field name="F_Profession" desc="专业" type="1" index=""/>
+        <field name="F_Name" desc="名称" type="1" index=""/>
+        <field name="F_CompleteUnit" desc="完成单位" type="1" index=""/>
+        <field name="F_CompletionTime" desc="完成时间" type="5" index=""/>
+        <field name="F_Completer" desc="完成人" type="1" index=""/>
+        <field name="F_Abstract" desc="摘要" type="1" index=""/>
+        <field name="F_MainContent" desc="主要内容" type="1" index=""/>
+        <field name="F_PrimaryTarget" desc="主要目标" type="1" index=""/>
+        <field name="F_IdentificationResult" desc="成果鉴定结果" type="1" index=""/>
+        <field name="F_Awards" desc="成果所获奖项" type="1" index=""/>
+        <field name="F_AwardTime" desc="成果获奖时间" type="5" index=""/>
+        <field name="F_Conclusion" desc="结论" type="1" index=""/>
+        <field name="F_File" desc="文件" type="1" index=""/>
+    </table>
+    <table code="category01-0207" name="TB_TransportSystem" desc="运输系统">
+        <field name="F_Master_Equipment_Model" desc="主提升设备型号" type="1" index=""/>
+        <field name="F_Master_Promote_Mode" desc="主提升方式" type="1" index=""/>
+        <field name="F_Auxiliary_Equipment_Model" desc="辅助提升设备型号" type="1" index=""/>
+        <field name="F_Auxiliary_Promote_Mode" desc="辅助提升方式" type="1" index=""/>
+        <field name="F_Main_Roadway_Transport_Mode" desc="大巷运输方式" type="1" index=""/>
+    </table>
+    <table code="category01-0401" name="TB_TunnellingWorkingFace" desc="掘进工作面">
+        <field name="F_Time" desc="年份" type="5" index=""/>
+        <field name="F_Workface_Name" desc="工作面名称" type="1" index=""/>
+        <field name="F_Mining_Area" desc="所属采区" type="1" index=""/>
+        <field name="F_Type" desc="类别" type="4" index="" dictionary="BF01-0401JJ-MCLB"/>
+        <field name="F_Support_Type" desc="支护类型" type="1" index=""/>
+        <field name="F_Sectional_Area" desc="断面面积" type="2" index="" unit="m2"/>
+        <field name="F_Sectional_Form" desc="断面形状" type="1" index=""/>
+        <field name="F_Height" desc="高度" type="2" index="" unit="m"/>
+        <field name="F_Wide_Coal" desc="宽煤" type="1" index=""/>
+        <field name="F_Tunnelling_Type" desc="掘进方式" type="1" index=""/>
+        <field name="F_Tunnelling_Speed" desc="掘进速度" type="2" index="" unit=""/>
+        <field name="F_Tunnelling_Equipment" desc="掘进装备" type="1" index=""/>
+        <field name="F_Providing_Wind" desc="供风量" type="2" index="" unit=""/>
+        <field name="F_Laneway_Length" desc="巷道长度" type="2" index="" unit="m"/>
+        <field name="F_Begin_Time" desc="开始时间" type="5" index=""/>
+        <field name="F_Is_Outburst_Prevention" desc="是否防突" type="3" index="" unit=""/>
+        <field name="F_Laneway_Slope" desc="巷道坡度" type="2" index="" unit="度"/>
+        <field name="F_Construction_Period" desc="施工期" type="1" index=""/>
+    </table>
+    <table code="category07-0204" name="TB_Ventilation_Resistance" desc="通风阻力测定">
+        <field name="F_AirShaft" desc="风井" type="1" index=""/>
+        <field name="F_AirVolume_Q" desc="风量Q" type="2" index="" unit="m3/s"/>
+        <field name="F_Length" desc="长度" type="2" index="" unit="m"/>
+        <field name="F_VentilationResistance_h" desc="通风阻力h" type="2" index="" unit="Pa"/>
+        <field name="F_EqualOrifice_A" desc="等积孔A" type="2" index="" unit="m3"/>
+        <field name="F_OutsideLeakageRate" desc="外部漏风率" type="2" index="" unit="%"/>
+        <field name="F_UnitOfMeasurement" desc="测定单位" type="1" index=""/>
+        <field name="F_DeterminationTime" desc="测定时间" type="5" index=""/>
+    </table>
+    <table code="category03-0301" name="TB_WaterInflow_Coalmine" desc="矿井涌水量台账">
+        <field name="F_Year" desc="年份" type="1" index=""/>
+        <field name="F_WaterInflow_January" desc="一月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_February" desc="二月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_March" desc="三月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_April" desc="四月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_May" desc="五月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_June" desc="六月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_July" desc="七月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_August" desc="八月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_September" desc="九月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_October" desc="十月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_November" desc="十一月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_December" desc="十二月涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_Ave" desc="平均涌水量" type="2" index="" unit="m3/h"/>
+    </table>
+    <table code="category03-0303" name="TB_WaterInflow_CoalminingWorkintFace" desc="采煤工作面涌水台账">
+        <field name="F_Time" desc="日期" type="1" index=""/>
+        <field name="F_Cooling_Rinsing" desc="淋水设备冷却清水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Cooling_Sewage" desc="淋水设备冷却污水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_Rinsing" desc="采空区涌水量清水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_Sewage" desc="采空区涌水量污水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Weepage_Rinsing" desc="探放水孔泄水清水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Weepage_Sewage" desc="探放水孔泄水污水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Workface_Total" desc="工作面合计涌水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_Total_Rinsing" desc="工作面合计涌水清水量" type="2" index="" unit="m3/h"/>
+        <field name="F_WaterInflow_Total_Sewage" desc="工作面合计涌水污水量" type="2" index="" unit="m3/h"/>
+    </table>
+    <table code="category03-0302" name="TB_WaterInflow_MineArea" desc="采区涌水量台账">
+        <field name="F_Time" desc="日期" type="1" index=""/>
+        <field name="F_Rinsing_Quantity" desc="清水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Sewage_Quantity" desc="污水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Mine_Area" desc="采区" type="1" index=""/>
+        <field name="F_Total_Effluent_Quantity" desc="合计出水量" type="2" index="" unit="m3/h"/>
+    </table>
+    <table code="category03-0305" name="TB_WaterInflow_Other" desc="其他地点涌水量">
+        <field name="F_Time" desc="日期" type="1" index=""/>
+        <field name="F_Region_Name" desc="区域名称" type="1" index=""/>
+        <field name="F_Rinsing" desc="清水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Sewage" desc="污水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Total_Quantity" desc="合计出水量" type="2" index="" unit="m3/h"/>
+    </table>
+    <table code="category03-0304" name="TB_WaterInflow_TunnellingWorkintFace" desc="掘进工作面涌水台账">
+        <field name="F_Time" desc="日期" type="1" index=""/>
+        <field name="F_Rinsing" desc="清水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Sewage" desc="污水量" type="2" index="" unit="m3/h"/>
+        <field name="F_Total_Quantity" desc="合计出水量" type="2" index="" unit="m3/h"/>
+    </table>
+</database>

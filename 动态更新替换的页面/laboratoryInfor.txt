@@ -1,0 +1,19 @@
+//实验室-开始
+let laboratoryRoutes = [
+  //实验室信息-开始
+  {
+    path: '/coalSample',
+    name: 'coalSample',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: coalSample,
+    }
+  }
+  //实验室信息-结束
+];
+//实验室-结束
+
+
+
+//实验室-开始
+import coalSample from '../components/inforSearch/laboratoryInfor/theThirdParty/coalSample/coalSample.vue'

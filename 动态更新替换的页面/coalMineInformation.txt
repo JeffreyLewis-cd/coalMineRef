@@ -1,0 +1,179 @@
+//煤矿信息-开始
+import coalMineInfor from '../components/inforSearch/coalMineInformation/coalMineEnerprise/coalMines/coalMineInformation.vue'
+import enterpriseInfor from '../components/inforSearch/coalMineInformation/coalMineEnerprise/enterprises/enterpriseInfor.vue'
+import airFlow from '../components/inforSearch/coalMineInformation/productionSystem/airFlow/airFlow.vue'
+import production from '../components/inforSearch/coalMineInformation/productionSystem/production/production.vue'
+import drainage from '../components/inforSearch/coalMineInformation/productionSystem/drainage/drainage.vue'
+import pumpWaterOut from '../components/inforSearch/coalMineInformation/productionSystem/pumpWaterOut/pumpWaterOut.vue'
+import monitor from '../components/inforSearch/coalMineInformation/productionSystem/monitor/monitor.vue'
+import machaAndElec from '../components/inforSearch/coalMineInformation/productionSystem/machaAndElec/machaAndElec.vue'
+import transportation from '../components/inforSearch/coalMineInformation/productionSystem/transportation/transportation.vue'
+import headingFace from '../components/inforSearch/coalMineInformation/workingFace/headingFace/headingFace.vue'
+import coalMineFace from '../components/inforSearch/coalMineInformation/workingFace/coalMineFace/coalMineFace.vue'
+import coalFormation from '../components/inforSearch/coalMineInformation/coalGeology/coalFormation/coalFormation.vue'
+import breakFormation from '../components/inforSearch/coalMineInformation/coalGeology/breakFormation/breakFormation.vue'
+import protectCoalPillar from '../components/inforSearch/coalMineInformation/coalGeology/protectCoalPillar/protectCoalPillar.vue'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//煤矿信息-开始
+let coalMineInforRoutes = [
+
+  //用户首页-开始
+  {
+    path: '/',
+    name: 'userHomePage',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: userHomePageBody,
+    }
+  },
+  {
+    path: '/login',
+    name: 'login',
+    components: {
+      // sortPicker: sortPicker,
+      pageBody: login,
+    }
+  },
+  {
+    path: '/register',
+    name: 'register',
+    components: {
+      pageBody: register,
+    }
+  },
+  //用户首页-结束
+
+  //煤矿信息-开始
+  {
+    path: '/coalMineInfor',
+    name: 'coalMineInfor',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: coalMineInfor,
+    }
+  },
+  {
+    path: '/enterpriseInfor',
+    name: 'enterpriseInfor',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: enterpriseInfor,
+    }
+  },
+  {
+    path: '/airFlow',
+    name: 'airFlow',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: airFlow,
+    }
+  },
+  {
+    path: '/production',
+    name: 'production',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: production,
+    }
+  },
+  {
+    path: '/drainage',
+    name: 'drainage',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: drainage,
+    }
+  },
+  {
+    path: '/pumpWaterOut',
+    name: 'pumpWaterOut',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: pumpWaterOut,
+    }
+  },
+  {
+    path: '/monitor',
+    name: 'monitor',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: monitor,
+    }
+  },
+  {
+    path: '/machaAndElec',
+    name: 'machaAndElec',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: machaAndElec,
+    }
+  },
+  {
+    path: '/transportation',
+    name: 'transportation',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: transportation,
+    }
+  },
+  {
+    path: '/headingFace',
+    name: 'headingFace',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: headingFace,
+    }
+  },
+  {
+    path: '/coalMineFace',
+    name: 'coalMineFace',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: coalMineFace,
+    }
+  },
+  {
+    path: '/coalFormation',
+    name: 'coalFormation',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: coalFormation,
+    }
+  },
+  {
+    path: '/breakFormation',
+    name: 'breakFormation',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: breakFormation,
+    }
+  },
+  {
+    path: '/protectCoalPillar',
+    name: 'protectCoalPillar',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: protectCoalPillar,
+    }
+  },
+  //煤矿信息-结束
+];
+//煤矿信息-结束

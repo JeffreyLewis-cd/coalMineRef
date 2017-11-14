@@ -1,0 +1,70 @@
+//            //点击页码翻页
+//            bindPageFunc: function () {
+//                let pagerBox = document.getElementsByClassName("showDataList-pager")[0];
+//                let pageSizeOption = pagerBox.getElementsByClassName('ivu-select-item');
+//                let newPageSize = (pagerBox.getElementsByClassName('ivu-select-selected-value')[0].innerHTML).substring(0, 2);
+//                let that = this;
+//                for (let key2 = 0; key2 < pageSizeOption.length; key2++) {
+//                    pageSizeOption[key2].onclick = function () {
+//                        newPageSize = (pagerBox.getElementsByClassName('ivu-select-selected-value')[0].innerHTML).substring(0, 2);
+//                        that.$store.commit(MUTATIONS.updatePageSize, newPageSize);
+//                    };
+//                }
+//                //点击页码数字翻页
+//                let clickedPageNum = pagerBox.getElementsByClassName('ivu-page-item');
+//                for (let key1 = 0; key1 < clickedPageNum.length; key1++) {
+//                    clickedPageNum[key1].onmousedown = function () {
+//                        let pageNumAndSize = {
+//                            pageNum: this.title,
+//                            pageSize: newPageSize
+//                        };
+//                        console.log(pageNumAndSize);
+//                        that.$store.commit(MUTATIONS.switchPage, pageNumAndSize);
+//                        that.clickPager();
+//                    }
+//                }
+//                //点击左箭头翻页
+//                let prevPage = pagerBox.getElementsByClassName("ivu-page-prev")[0];
+//                prevPage.onmousedown = function () {
+//                    let pageNumAndSize = {
+//                        pageNum: (that.currentPageNum > 1) ? that.currentPageNum - 1 : 1,
+//                        pageSize: newPageSize
+//                    };
+//                    that.$store.commit(MUTATIONS.switchPage, pageNumAndSize);
+//                    that.clickPager();
+//                };
+//                //点击右箭头翻页
+//                let nextPage = pagerBox.getElementsByClassName("ivu-page-next")[0];
+//                nextPage.onmousedown = function () {
+//                    let maxPage = Math.ceil(that.totalCount / newPageSize);
+//                    console.log(maxPage);
+//                    let pageNumAndSize = {
+//                        pageNum: (that.currentPageNum < maxPage) ? that.currentPageNum + 1 : maxPage,
+//                        pageSize: newPageSize
+//                    };
+//                    that.$store.commit(MUTATIONS.switchPage, pageNumAndSize);
+//                    that.clickPager();
+//                }
+//            },
+//
+//            //点击页码更新数据列表
+//            clickPager: function () {
+//                this.collectAllparameters();//暂时隐藏空数据提示信息！+导入收集参数 return parametersAll
+//
+//                //根据搜索条件参数去请求数据，准备列表展示
+//                this.axios.post(this.searchDataLink + this.activeCategory, this.parametersAllx)
+//                    .then((res) => {
+//                        let aNewListData=res.data.Data;
+//                        if(aNewListData!=null) {
+//                            this.$store.commit(MUTATIONS.listDataItemsUp, aNewListData); //更新列表数据
+//                            //控制列表展示
+//                            this.$store.commit(MUTATIONS.searchedDataShow);
+//                            //绑定翻页函数
+//                            setTimeout(this.bindPageFunc, 100);
+//                        }
+//                    })
+//                    .catch(function (error) {
+//                        console.log(error);
+//                        console.log('数据请求失败-axios-post！');
+//                    });
+//            },

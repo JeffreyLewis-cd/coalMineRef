@@ -1,0 +1,234 @@
+                            <Row v-show=" activeListCode =='category01-0102'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>设计生产能力:</span> {{listItem.designedpc}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>投产时间:</span> {{listItem.productionTime}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>矿井职工数:</span> {{listItem.coalmineStaffcount}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>企业性质:</span> {{listItem.Cid}}</Col>
+
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0201'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>总进风量:</span> {{listItem.EnterairNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>总回风量:</span> {{listItem.ReturnairNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>主扇型号:</span> {{listItem.PrimaryfanModelNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>风排瓦斯:</span> {{listItem.ExhaustGas}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0202'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>现开采煤层高度:</span> {{listItem.CorrentExploitHeight}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>当前回采面数量:</span> {{listItem.CurrentBackstopingNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>当前掘进面数量:</span> {{listItem.CurrentTunnellingNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>进风井数:</span> {{listItem.EnterAirMineNum}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0203'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>设计抽采能力（m3/min）:</span> {{listItem.DesginExtractionCapacity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>可抽采量（Mm3）:</span> {{listItem.ExtractionCapacity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>年抽采纯量（万m3）:</span> {{listItem.ExtractionCapacityInyear}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>抽放负压（Kpa）:</span> {{listItem.ExtractionNegativePressure}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0204'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>副水仓容积:</span> {{listItem.AssistantDibholeCubage}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>矿井年平均涌水量（万m3）:</span> {{listItem.AverageWaterinflowInyear}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>主排水泵台数:</span> {{listItem.DrainagePumpNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>主排水泵型号:</span> {{listItem.DrainagePumpType}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0205'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>分站型号:</span> {{listItem.BranchStationModelNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>分站数量:</span> {{listItem.BranchStationNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>产量监控系统型号:</span> {{listItem.MonitoredSystemModel}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>人员定位系统型号:</span> {{listItem.OrientationSystemModel}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>传感器数量:</span> {{listItem.SensorNum}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0206'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>变压器功率:</span> {{listItem.CapacityFactor}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤矿名称:</span> {{listItem.CoalmineName}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>风电瓦斯电闭锁:</span> {{listItem.Fdwsdbs}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>“三专两闭锁”情况:</span> {{listItem.SzlbsSituation}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>双回路供电情况:</span> {{listItem.TwocircuitCurrentSupply}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0207'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>辅助提升设备型号:</span> {{listItem.AuxiliaryEquipmentModel}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>辅助提升方式:</span> {{listItem.AuxiliaryPromoteMode}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>大巷运输方式:</span> {{listItem.MainRoadwayTransportMode}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>主提升设备型号:</span> {{listItem.MasterEquipmentModel}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0301'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤层名称:</span> {{listItem.CoalseamName}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>最大瓦斯压力:</span> {{listItem.MaxMashgasPressure}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>最小坚固性系数f:</span> {{listItem.MinSturdinessrRatio}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤层倾角:</span> {{listItem.SeamObliquity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤层厚度:</span> {{listItem.SeamThickness}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0311'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>面积:</span> {{listItem.Area}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>采出量t:</span> {{listItem.Ccl}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>批准量t:</span> {{listItem.CheckCount}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>批准时间:</span> {{listItem.CheckTime}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category01-0401'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>开始时间:</span> {{listItem.BeginTime}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤矿名称:</span> {{listItem.CoalmineName}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤层名称:</span> {{listItem.CoalseamName}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>施工期:</span> {{listItem.ConstructionPeriod}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0101'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>瓦斯积聚的原因:</span> {{listItem.GatherCauseMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>点火源:</span> {{listItem.IncendiarySourceMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>地点属性:</span> {{listItem.PlaceTypeMap}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0102'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>事故地点瓦斯浓度:</span> {{listItem.MashgasDensity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>地点类型:</span> {{listItem.PlaceTypeMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>瓦斯浓度超限地点及浓度:</span> {{listItem.TransfinitePlaceDensity}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0103'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>突出日期:</span> {{listItem.Date}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>标高:</span> {{listItem.DatumMark}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>死亡人数:</span> {{listItem.DiedNum}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>地点:</span> {{listItem.Place}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0201'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>发生部位:</span> {{listItem.OccurPlaceMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>地点属性:</span> {{listItem.PlaceTypeMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>突水通道:</span> {{listItem.WaterInrushPassageMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>突水水源:</span> {{listItem.WaterInrushSourceMap}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0301'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>可燃物质分类:</span> {{listItem.CombustibleMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>引火地点:</span> {{listItem.FirePlaceMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>引火热源:</span> {{listItem.FireSourceMap}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>地点属性（发火位置）:</span> {{listItem.PlaceTypeMap}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0401'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>面积（m2）:</span> {{listItem.Area}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>原因分类:</span> {{listItem.Cause}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤量（吨）:</span> {{listItem.CoalmineAmount}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>地点属性:</span> {{listItem.PlaceTypeMap}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0402'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>巷道闭合长度（m）:</span> {{listItem.LandwayCloseLength}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>巷道损坏长度（m）:</span> {{listItem.LandwayDamageLength}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>巷道支护方式:</span> {{listItem.LanewaySupportType}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>断面面积:</span> {{listItem.SectionArea}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category02-0501'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>CO体积浓度:</span> {{listItem.VolumeThicknessCo}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>地点属性:</span> {{listItem.PlaceTypeMap}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0101'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>测风时间:</span> {{listItem.Time}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>测风地点:</span> {{listItem.Place}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>风速（m/min）:</span> {{listItem.WindSpeed}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>风量（m3/min）:</span> {{listItem.AirQuantity}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0102'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>功率（Kw）:</span> {{listItem.CapacityFactor}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>矿井有效风量（m3/min）:</span> {{listItem.CoalmineEffectiveAir}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>矿井总进风量（m3/min）:</span> {{listItem.CoalmineTotalEnterAir}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>矿井总回风量（m3/min):</span> {{listItem.CoalmineTotalReturnAir}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0103'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>局扇名称:</span> {{listItem.PartfanName}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>局扇型号:</span> {{listItem.PartfanNo}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>局扇地点:</span> {{listItem.PartfanPlace}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>局扇用途:</span> {{listItem.PartfanPurpose}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0201'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>埋深:</span> {{listItem.Depth}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>含量(m3/t):</span> {{listItem.MashgasContent}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>测定单位:</span> {{listItem.MensurateDepartment}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>测定时间:</span> {{listItem.MensurateTime}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0205'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>混合流量（m3/min）:</span> {{listItem.MixedFlowrate}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>监测时间:</span> {{listItem.MonitorTime}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>压力（Pa）:</span> {{listItem.Pressure}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>温度（℃）:</span> {{listItem.Temperature}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0209'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>民用户数（户）:</span> {{listItem.DemosAmount}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>民用利用量（Mm3):</span> {{listItem.DemosUtilizationRatio}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>利用率（Mm3):</span> {{listItem.UtilizationRatio}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>年份:</span> {{listItem.Year}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0210'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>风量（m3/min）:</span> {{listItem.BlowingRate}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>所属采区:</span> {{listItem.CoalmineArea}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>日产量（t）:</span> {{listItem.DailyProduction}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>抽采量（m3/min）:</span> {{listItem.ExtractionQuantity}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0211'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>距开口（切眼）距离:</span> {{listItem.CuttingDistance}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>夹矸厚度:</span> {{listItem.DirtbandThickness}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>瓦斯浓度:</span> {{listItem.MashgasThickness}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>采区:</span> {{listItem.MineArea}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0301'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>一月涌水量:</span> {{listItem.WaterinflowJanuary}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>二月涌水量:</span> {{listItem.WaterinflowFebruary}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>三月涌水量:</span> {{listItem.WaterinflowMarch}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>四月涌水量:</span> {{listItem.WaterinflowApril}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0301'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>采区:</span> {{listItem.MineArea}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>清水量（m3/h）:</span> {{listItem.RinsingQuantity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>污水量（m3/h）:</span> {{listItem.SewageQuantity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>日期:</span> {{listItem.Time}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0301'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>采区:</span> {{listItem.MineArea}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>清水量（m3/h）:</span> {{listItem.RinsingQuantity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>污水量（m3/h）:</span> {{listItem.SewageQuantity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>日期:</span> {{listItem.Time}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0305'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>区域名称:</span> {{listItem.RegionName}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>清水量（m3/h）:</span> {{listItem.Rinsing}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>污水量（m3/h）:</span> {{listItem.Sewage}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>日期:</span> {{listItem.Time}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0401'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>检查地点:</span> {{listItem.CheckPlace}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>检查时间:</span> {{listItem.CheckTime}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>温度（℃）:</span> {{listItem.Temperature}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>CH4（%）:</span> {{listItem.ThicknessCh4}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0402'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>密闭后CH4（%）:</span> {{listItem.AftObturationCh4}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>密闭后CO（ppm）:</span> {{listItem.AftObturationCo}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>密闭前CO2（%）:</span> {{listItem.AftObturationCo2}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>密闭后温度（℃）:</span> {{listItem.AftObturationTemperature}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0403'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>空气成分:</span> {{listItem.AirComposition}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>建筑材料:</span> {{listItem.BuildingMaterials}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>灌浆量:</span> {{listItem.GroutCapacity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>火区位置示意图:</span> {{listItem.Locationsketchmap}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0403'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>C2H2:</span> {{listItem.ConsistenceC2h2}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>C2H4:</span> {{listItem.ConsistenceC2h4}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>C2H6:</span> {{listItem.ConsistenceC2h6}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>CH4:</span> {{listItem.ConsistenceCh4}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0501'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤层坚固性系数:</span> {{listItem.CoalseamConsistentcoefficient}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤层可注性:</span> {{listItem.CoalseamGroutability}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>煤层吸水率:</span> {{listItem.CoalseamHydroscopicity}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>粉尘分散度:</span> {{listItem.DispersionDegree}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0502'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>测定时间:</span> {{listItem.CheckTime}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>沉积煤层质量:</span> {{listItem.CoalseamQuality}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>粉尘性质:</span> {{listItem.DustCharacters}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>测定地点:</span> {{listItem.Place}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0503'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>呼吸系统过往病史:</span> {{listItem.BreatheHistoricalDisease}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>体检时间:</span> {{listItem.CheckTime}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>体检结果:</span> {{listItem.Checkresult}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>所属部门:</span> {{listItem.Department}}</Col>
+                            </Row>
+                            <Row v-show=" activeListCode =='category03-0601'">
+                                <Col  class="shDataLi-item-detail" span="8"> <span>破坏性冲击地压次数:</span> {{listItem.DestructiveRockBurstTimes}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>一般冲击地压次数:</span> {{listItem.GeneralRockBurstTimes}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>震级:</span> {{listItem.Magnitude}}</Col>
+                                <Col  class="shDataLi-item-detail" span="8"> <span>冲击地压事故次数:</span> {{listItem.RockburstAccidentsTimes}}</Col>
+                            </Row>

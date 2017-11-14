@@ -1,0 +1,251 @@
+//安全监测-开始
+import testAirFlow from '../components/inforSearch/safetyMonitor/ventilate/testAirFlow/testAirFlow.vue'
+import mainVentilate from '../components/inforSearch/safetyMonitor/ventilate/mainVentilate/mainVentilate.vue'
+import partVentilate from '../components/inforSearch/safetyMonitor/ventilate/partVentilate/partVentilate.vue'
+import gasOccurrence from '../components/inforSearch/safetyMonitor/gas/gasOccurrence/gasOccurrence.vue'
+import gasDrainage from '../components/inforSearch/safetyMonitor/gas/gasDrainage/gasDrainage.vue'
+import gasUsage from '../components/inforSearch/safetyMonitor/gas/gasUsage/gasUsage.vue'
+import gasDetection from '../components/inforSearch/safetyMonitor/gas/gasDetection/gasDetection.vue'
+import gasOutburst from '../components/inforSearch/safetyMonitor/gas/gasOutburst/gasOutburst.vue'
+import mineWater from '../components/inforSearch/safetyMonitor/antiWater/mineWater/mineWater.vue'
+import headingFaceWater from '../components/inforSearch/safetyMonitor/antiWater/headingFaceWater/headingFaceWater.vue'
+import miningFaceWater from '../components/inforSearch/safetyMonitor/antiWater/miningFaceWater/miningFaceWater.vue'
+import otherWater from '../components/inforSearch/safetyMonitor/antiWater/otherWater/otherWater.vue'
+import productionAreaWater from '../components/inforSearch/safetyMonitor/antiWater/productionAreaWater/productionAreaWater.vue'
+import fireInspection from '../components/inforSearch/safetyMonitor/firePrevention/fireInspection/fireInspection.vue'
+import fireAreaManagement from '../components/inforSearch/safetyMonitor/firePrevention/fireAreaManagement/fireAreaManagement.vue'
+import fireSealCheck from '../components/inforSearch/safetyMonitor/firePrevention/fireSealCheck/fireSealCheck.vue'
+import fireSample from '../components/inforSearch/safetyMonitor/firePrevention/fireSample/fireSample.vue'
+import dustData from '../components/inforSearch/safetyMonitor/dustProof/dustData/dustData.vue'
+import dustFiles from '../components/inforSearch/safetyMonitor/dustProof/dustFiles/dustFiles.vue'
+import dustInfor from '../components/inforSearch/safetyMonitor/dustProof/dustInfor/dustInfor.vue'
+import pressureLog from '../components/inforSearch/safetyMonitor/coalMinePressure/pressureLog/pressureLog.vue'
+import pressureMonitor from '../components/inforSearch/safetyMonitor/coalMinePressure/pressureMonitor/pressureMonitor.vue'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//安全监测-开始
+let safetyMonitorRoutes = [
+
+  //安全监测-开始
+
+  {
+    path: '/testAirFlow',
+    name: 'testAirFlow',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: testAirFlow,
+    }
+  }
+  ,
+  {
+    path: '/mainVentilate',
+    name: 'mainVentilate',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: mainVentilate,
+    }
+  }
+  ,
+  {
+    path: '/partVentilate',
+    name: 'partVentilate',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: partVentilate,
+    }
+  }
+  ,
+  {
+    path: '/gasOccurrence',
+    name: 'gasOccurrence',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: gasOccurrence,
+    }
+  }
+  ,
+  {
+    path: '/gasDrainage',
+    name: 'gasDrainage',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: gasDrainage,
+    }
+  }
+  ,
+  {
+    path: '/gasUsage',
+    name: 'gasUsage',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: gasUsage,
+    }
+  }
+  ,
+  {
+    path: '/gasDetection',
+    name: 'gasDetection',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: gasDetection,
+    }
+  }
+  ,
+  {
+    path: '/gasOutburst',
+    name: 'gasOutburst',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: gasOutburst,
+    }
+  }
+  ,
+  {
+    path: '/mineWater',
+    name: 'mineWater',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: mineWater,
+    }
+  }
+  ,
+  {
+    path: '/headingFaceWater',
+    name: 'headingFaceWater',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: headingFaceWater,
+    }
+  }
+  ,
+  {
+    path: '/miningFaceWater',
+    name: 'miningFaceWater',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: miningFaceWater,
+    }
+  }
+  ,
+  {
+    path: '/otherWater',
+    name: 'otherWater',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: otherWater,
+    }
+  }
+  ,
+  {
+    path: '/productionAreaWater',
+    name: 'productionAreaWater',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: productionAreaWater,
+    }
+  }
+  ,
+  {
+    path: '/fireInspection',
+    name: 'fireInspection',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: fireInspection,
+    }
+  }
+  ,
+  {
+    path: '/fireAreaManagement',
+    name: 'fireAreaManagement',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: fireAreaManagement,
+    }
+  }
+  ,
+  {
+    path: '/fireSealCheck',
+    name: 'fireSealCheck',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: fireSealCheck,
+    }
+  }
+  ,
+  {
+    path: '/fireSample',
+    name: 'fireSample',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: fireSample,
+    }
+  }
+  ,
+  {
+    path: '/dustData',
+    name: 'dustData',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: dustData,
+    }
+  }
+  ,
+  {
+    path: '/dustFiles',
+    name: 'dustFiles',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: dustFiles,
+    }
+  }
+  ,
+  {
+    path: '/dustInfor',
+    name: 'dustInfor',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: dustInfor,
+    }
+  }
+  ,
+  {
+    path: '/pressureLog',
+    name: 'pressureLog',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: pressureLog,
+    }
+  }
+  ,
+  {
+    path: '/pressureMonitor',
+    name: 'pressureMonitor',
+    components: {
+      sortPicker: sortPicker,
+      pageBody: pressureMonitor,
+    }
+  }
+  ,
+
+  //安全监测-结束----pressureMonitor
+];
+//安全监测-结束

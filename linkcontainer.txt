@@ -1,0 +1,182 @@
+/*    linksContainer: [
+        {
+            'link': 'http://47.92.150.231:8080/cdis/enterprise/dynamicQuery',
+            'syncCode': 'category01-0101'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/coalmine/dynamicQuery',
+            'syncCode': 'category01-0102'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/aeration/dynamicQuery',
+            'syncCode': 'category01-0201'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/exploit/dynamicQuery',
+            'syncCode': 'category01-0202'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/extraction/dynamicQuery',
+            'syncCode': 'category01-0203'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/drainage/dynamicQuery',
+            'syncCode': 'category01-0204'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/monitoredControl/dynamicQuery',
+            'syncCode': 'category01-0205'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/electromechanical/dynamicQuery',
+            'syncCode': 'category01-0206'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/transport/dynamicQuery',
+            'syncCode': 'category01-0207'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/coalseam/dynamicQuery',
+            'syncCode': 'category01-0301'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/faultage/dynamicQuery',
+            'syncCode': 'category01-0304'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/protectCoalpillar/dynamicQuery',
+            'syncCode': 'category01-0311'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/workingFace/tWorkingFace/dynamicQuery',
+            'syncCode': 'category01-0401'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/workingFace/cWorkingFace/dynamicQuery',
+            'syncCode': 'category01-0402'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/mashgasBlast/dynamicQuery',
+            'syncCode': 'category02-0101'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/mashgasPoisoning/dynamicQuery',
+            'syncCode': 'category02-0102'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/mashgasExtrude/dynamicQuery',
+            'syncCode': 'category02-0103'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/waterhazard/dynamicQuery',
+            'syncCode': 'category02-0201'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/fire/dynamicQuery',
+            'syncCode': 'category02-0301'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/roofCollapsed/dynamicQuery',
+            'syncCode': 'category02-0401'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/impactDYKZ/dynamicQuery',
+            'syncCode': 'category02-0402'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/accident/coalDust/dynamicQuery',
+            'syncCode': 'category02-0501'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/aeration/anemometry/dynamicQuery',
+            'syncCode': 'category03-0101'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/aeration/anemometry/dynamicQuery',
+            'syncCode': 'category03-0101'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/aeration/primaryFan/dynamicQuery',
+            'syncCode': 'category03-0102'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/aeration/partAeration/dynamicQuery',
+            'syncCode': 'category03-0103'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/mashgas/contentMeasure/dynamicQuery',
+            'syncCode': 'category03-0201'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/mashgas/extractionMonitor/dynamicQuery',
+            'syncCode': 'category03-0205'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/mashgas/utilization/dynamicQuery',
+            'syncCode': 'category03-0209'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/mashgas/check/dynamicQuery',
+            'syncCode': 'category03-0210'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/mashgas/gasBrust/dailyCheck/dynamicQuery',
+            'syncCode': 'category03-0211'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/waterInflow/coalmine/dynamicQuery',
+            'syncCode': 'category03-0301'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/waterInflow/mineArea/dynamicQuery',
+            'syncCode': 'category03-0302'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/waterInflow/coalminingWorkintFace/dynamicQuery',
+            'syncCode': 'category03-0303'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/waterInflow/tunnellingWorkintFace/dynamicQuery',
+            'syncCode': 'category03-0304'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/waterInflow/other/dynamicQuery',
+            'syncCode': 'category03-0305'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/fireproofing/fireproofingCheck/dynamicQuery',
+            'syncCode': 'category03-0401'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/fireproofing/obturationCheck/dynamicQuery',
+            'syncCode': 'category03-0402'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/fireproofing/fireRegionManage/dynamicQuery',
+            'syncCode': 'category03-0403'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/fireproofing/sampleSurvey/dynamicQuery',
+            'syncCode': 'category03-0404'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/dustproofing/dustPhysicalCheck/dynamicQuery',
+            'syncCode': 'category03-0501'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/dustproofing/dustCheck/dynamicQuery',
+            'syncCode': 'category03-0502'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/dustproofing/workerDustArchive/dynamicQuery',
+            'syncCode': 'category03-0503'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/minePressure/rockBurstLog/dynamicQuery',
+            'syncCode': 'category03-0601'
+        },
+        {
+            'link': 'http://47.92.150.231:8080/cdis/minePressure/surportHydraumatic/dynamicQuery',
+            'syncCode': 'category03-0602'
+        },
+    ],*/
